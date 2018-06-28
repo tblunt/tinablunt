@@ -1,5 +1,5 @@
 {
-  "name": "foundme-web",
+  "name": "tinablunt-web",
   "version": "0.10.0",
   "description": "Web application for the Finderoo site.",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Usify/foundme-web.git"
+    "url": "git+https://github.com/tblunt/tinablunt.git"
   },
   "author": "Usify AB, Mikael K J Eriksson, Tina Blunt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Usify/foundme-web/issues"
+    "url": "https://github.com/tblunt/tinablunt.git/issues"
   },
-  "homepage": "https://github.com/Usify/foundme-web#readme",
+  "homepage": "https://github.com/tblunt/tinablunt#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
