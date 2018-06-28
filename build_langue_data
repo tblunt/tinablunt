@@ -1,0 +1,162 @@
+#!/usr/bin/env node
+
+
+// Tool for generating language file from PO files.
+//
+// Usage: 
+// $ ./build_langue_data
+//
+// The "app/assets/translation/translation.js" will be updated based on the data in the language files
+// in "import/po/" directory.
+
+
+'use strict';
+
+
+var config = {
+	poFileDirectoryPath: 'import/po/',
+};
+
+
+var fs = require('fs');
+var path = require('path');
+
+
+function ParserPo(poFilePath) {
+	this.lineList = fs.readFileSync(poFilePath, {encoding:'utf8'}).split("\n");
+}
+
+
+ParserPo.prototype._peekNextLine = function () {
+	if (this.lineList.length == 0) {
+		return null;
+	}
+
+	return this.lineList[0];
+};
+
+
+ParserPo.prototype._scoopNextLine = function () {
+	if (this.lineList.length == 0) {
+		return null;
+	}
+
+	return this.lineList.shift();
+};
+
+
+ParserPo.prototype.getNextKey = function () {
+	var messageKey;
+	
+	while (true) {
+		var line = this._scoopNextLine();
+		
+		// If end of file:
+		if (line === null) {
+			return null;
+		}
+		
+		line = line.trim();
+		
+		if (/msgid .*/.test(line)) {
+			messageKey = line.substr(7, line.length - 8);
+			
+			break;
+		}
+	}
+	
+	while (true) {
+		var line = this._peekNextLine().trim();
+			
+		if (line[0] == '"') {
+			this._scoopNextLine();
+			
+			messageKey += line.substr(1, line.length - 2);
+		}
+		else {
+			return messageKey.trim();
+		}
+	}
+};
+
+
+ParserPo.prototype.getNextValue = function () {
+	var messageKey;
+	
+	while (true) {
+		var line = this._scoopNextLine();
+		
+		// If end of file:
+		if (line === null) {
+			return null;
+		}
+		
+		line = line.trim();
+		
+		if (/msgstr .*/.test(line)) {
+			messageKey = line.substr(8, line.length - 9);
+			
+			break;
+		}
+	}
+	
+	while (true) {
+		var line = this._peekNextLine().trim();
+			
+		if (line[0] == '"') {
+			this._scoopNextLine();
+			
+			messageKey += line.substr(1, line.length - 2);
+		}
+		else {
+			return messageKey.trim();
+		}
+	}
+};
+
+
+function parsePoFile(poFilePath) {
+	console.log("-- Parsing '" + poFilePath + "'.");
+
+	var translationList = {};
+	
+	var parser = new ParserPo(poFilePath);
+
+	var phraseCount = 0;
+	while (true) {
+		var key = parser.getNextKey();
+		if (key === null) {
+			break;
+		}
+		
+		var value = parser.getNextValue();
+		if (value === null) {
+			break;
+		}
+		
+		if (key.length > 0 && value.length > 0) {
+			phraseCount++;
+		
+			translationList[key] = value;
+		}
+	}
+	
+	console.log("   Did extract " + phraseCount + " phrases.");
+
+	return translationList;
+}
+
+
+var languageData = {en:{}};
+
+var pathList = fs.readdirSync(config.poFileDirectoryPath);
+
+for (var k in pathList) { var poFileName = pathList[k];
+	var poFilePath = config.poFileDirectoryPath + poFileName; 
+	var languageCode = poFileName.split(".")[0];
+
+	languageData[languageCode] = parsePoFile(poFilePath);
+}
+
+
+fs.writeFileSync("asset/language/language.js", "var languageData = " + JSON.stringify(languageData) + "; export default languageData;");
