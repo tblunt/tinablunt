@@ -18,9 +18,12 @@ class Navigation extends React.Component {
         
 		return (
 			<Container>
-				<h1 styleName={styles.pageTitle}>Hi!</h1>
-				<p>I’m Tina Blunt, a swedish UX-design-developer</p>
-				<p><span>and this is</span> what I </p>
+				<div className={styles.textContent}>
+					<h1 styleName={styles.pageTitle}>Hi!</h1>
+					<h3>I’m Tina Blunt, a swedish UX-design-developer</h3>
+					<h3><span>and this is</span> what I </h3>
+				</div>
+				
 				<div className={styles.navigation}>
 					<NavigationItem 	
 						title="am"

@@ -4,7 +4,7 @@
 @circleSize: 1rem;
 
 .colorize(@color) {
-    h1 {
+    .title {
         color: @color;
     }
 
@@ -23,6 +23,12 @@
     .flex-direction(column);
     .align-items(center);
 
+    .title {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom:1rem;
+    }
+
     .lineWrapper {
         position: relative;
         width: 100%;
@@ -32,12 +38,12 @@
     
         .menuItemCircle, .menuItemHoverCircle {
             .border-radius(50%);
-            border: 0.1rem solid rgba(255,255,255,0.8);
+            border: 0.1rem solid @text_color;
             height: @circleSize;
             width: @circleSize;
             position: absolute;
             left:50%;
-            margin-left: -@circleSize*0.3;
+            margin-left: -@circleSize*0.5;
             z-index: 1;
             background: @gray_color_dark;
         }
@@ -49,7 +55,7 @@
         .line {
             position: absolute;
             height: 0.1rem;
-            background: rgba(255,255,255,0.8);
+            background: @text_color;
             right:0;
             left:0;
             top:50%;
@@ -82,7 +88,7 @@
             .colorize(@green_color);
         }
 
-        h1 {
+        .title {
             .transform(scale(1.1));
             .transition(transform ease-in 0.3s);
         }

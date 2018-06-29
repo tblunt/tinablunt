@@ -27,7 +27,7 @@ class NavigationItem extends React.Component {
        
 		return (
 			<div className={styles.menuItem + ' ' + colorStyle}>
-                <h1>{this.props.title}</h1>
+                <h3 className={styles.title}>{this.props.title}</h3>
                 <div className={styles.lineWrapper}>
                     <div className={styles.menuItemCircle}></div>
                     <div className={styles.menuItemHoverCircle}></div>
