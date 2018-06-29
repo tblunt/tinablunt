@@ -8,7 +8,11 @@
         color: @color;
     }
 
-    .lineWrapper .menuItemCircle {
+    .lineWrapper .menuItemCircle, .lineWrapper .menuItemHoverCircle {
+        border-color: @color;
+    }
+
+    .lineWrapper .menuItemHoverCircle {
         background: @color;
     }
 }
@@ -26,21 +30,25 @@
         .justify-content(center);
         height: @circleSize + 0.2rem;
     
-        .menuItemCircle {
+        .menuItemCircle, .menuItemHoverCircle {
             .border-radius(50%);
-            border: 0.05rem solid rgba(255,255,255,0.8);
+            border: 0.1rem solid rgba(255,255,255,0.8);
             height: @circleSize;
             width: @circleSize;
             position: absolute;
             left:50%;
-            .transform(translateX(-50%));
+            margin-left: -@circleSize*0.3;
             z-index: 1;
             background: @gray_color_dark;
         }
 
+        .menuItemHoverCircle {
+           .transform(scale(0));
+        }
+
         .line {
             position: absolute;
-            height: 0.05rem;
+            height: 0.1rem;
             background: rgba(255,255,255,0.8);
             right:0;
             left:0;
@@ -75,7 +83,14 @@
         }
 
         h1 {
-            .transform(scale(1.05));
+            .transform(scale(1.1));
+            .transition(transform ease-in 0.3s);
+        }
+
+        .lineWrapper .menuItemHoverCircle {
+            .transform(scale(1));
+            .transform-origin(50% 50%);
+            .transition(transform ease-in 0.5s);
         }
 
         .lineWrapper {

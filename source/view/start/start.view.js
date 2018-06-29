@@ -18,7 +18,6 @@ class StartView extends React.Component {
 		
 		return (
 			<Container>
-				<h5>start view</h5>
 			</Container>
 		);
 	}

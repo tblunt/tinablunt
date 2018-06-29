@@ -30,6 +30,7 @@ class NavigationItem extends React.Component {
                 <h1>{this.props.title}</h1>
                 <div className={styles.lineWrapper}>
                     <div className={styles.menuItemCircle}></div>
+                    <div className={styles.menuItemHoverCircle}></div>
                     <div className={styles.line}></div>
                 </div>
             </div>

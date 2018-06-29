@@ -1,7 +1,7 @@
 {
   "name": "tinablunt-web",
   "version": "0.10.0",
-  "description": "Web application for the Finderoo site.",
+  "description": "Tina Blunt, the UX-design-deleloper.",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/tblunt/tinablunt.git"
   },
-  "author": "Usify AB, Mikael K J Eriksson, Tina Blunt",
+  "author": "Tina Blunt",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tblunt/tinablunt.git/issues"
