@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from "mobx-react";
-import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import scrollHelper from './component/navigation/scrollHelper.js';
 import Navigation from './component/navigation/navigation.js';
@@ -16,39 +16,17 @@ const App = observer(class App_ extends React.Component {
 		this.state = {};
 	}
 
-
-	onViewChange() {
-		scrollHelper.scrollable.scrollTo(0, 0);
-		this.setState({ currentLocation:browserHistory.getCurrentLocation().pathname });
-	}
-	
-	
 	render() {
-		const routes = (
-			<div>
-				{/* Main views */}
-				<Route path='/' 
-					component={StartView}
-					history={browserHistory} 
-				/>
-
-			</div>
-		);
-		
 
 		return (
-			<Navigation 
-				history={browserHistory}
-				activeViewPath={this.state.currentLocation}
-			>
-				<Router 
-					history={browserHistory}
-					onUpdate={() => this.onViewChange()}
-					routes={routes}
-				>
+			<div>
+				<Navigation></Navigation>
+				<Router>
+					<Route path='/' 
+						component={StartView}
+					/>
 				</Router>
-
-			</Navigation>
+			</div>
 		);
 	}
 });

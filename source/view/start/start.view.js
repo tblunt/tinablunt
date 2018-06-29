@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Container from '../../component/container/container.component';
+
 import styles from './start.view.less';
 
 
@@ -14,11 +16,10 @@ class StartView extends React.Component {
 	
 	render() {
 		
-		
 		return (
-			<div>
+			<Container>
 				<h5>start view</h5>
-			</div>
+			</Container>
 		);
 	}
 }

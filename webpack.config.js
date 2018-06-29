@@ -14,56 +14,11 @@ var config = {
 		port: 8080,
 		proxy: {
 			// !!!:Debug
-			'/CODECODE':{
-				pathRewrite: {'^/CODECODE$' : '/index.html'},
-				target:'http://localhost:8080'
-			},
+			// '/CODECODE':{
+			// 	pathRewrite: {'^/CODECODE$' : '/index.html'},
+			// 	target:'http://localhost:8080'
+			// },
 
-			'/view/send-success':{
-				pathRewrite: {'^/view/send-success' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-
-			'/view/privacy-policy':{
-				pathRewrite: {'^/view/privacy-policy' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-			
-			'/support/faq':{
-				pathRewrite: {'^/support/faq' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-
-			'/support/contact':{
-				pathRewrite: {'^/support/contact' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-
-			'/shop/shop':{
-				pathRewrite: {'^/shop/shop' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-
-			'/about/about':{
-				pathRewrite: {'^/about/about' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-
-			'/about/get-started':{
-				pathRewrite: {'^/about/get-started' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-			
-			'/r/*':{
-				pathRewrite: {'^/r/.*' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-			
-			'/r/view/report-to-me':{
-				pathRewrite: {'^/r/view/report-to-me' : '/index.html'},
-				target:'http://localhost:8080'
-			},
-			
 		},
 	},
 	
