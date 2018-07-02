@@ -17,8 +17,12 @@ class StartView extends React.Component {
 	render() {
 		
 		return (
-			<Container>
-			</Container>
+			<div>
+				<Container>
+
+				</Container>
+				
+			</div>
 		);
 	}
 }

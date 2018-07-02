@@ -1,0 +1,157 @@
+@import '../../config/variables';
+@import '../../config/mixins';
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} 
+
+.svg {
+  position: absolute;
+  left:0;
+  right:0;
+  width: 100%;
+  height: auto;
+  bottom:0;
+  pointer-events: none;
+}
+
+
+
+.fadeInAnimation {
+  opacity: 0;
+
+  .animation(fadeIn 0.2s ease-in forwards 0.2s);
+
+    &.anim1 {
+        .animation(fadeIn 0.2s ease-in forwards 0.1s);
+    }
+
+    &.anim2 {
+        .animation(fadeIn 0.1s ease-in forwards 0.25s);
+    }
+
+    &.anim3 {
+        .animation(fadeIn 0.2s ease-in forwards 0.35s);
+    }
+
+    &.anim4 {
+        .animation(fadeIn 0.15s ease-in forwards 0.45s);
+    }
+
+    &.anim5 {
+        .animation(fadeIn 0.21s ease-in forwards 0.5s);
+    }
+
+    &.anim6 {
+        .animation(fadeIn 0.31s ease-in forwards 0.75s);
+    }
+
+    &.anim7 {
+        .animation(fadeIn 0.18s ease-in forwards 0.85s);
+    }
+
+    &.anim8 {
+        .animation(fadeIn 0.48s ease-in forwards 1s);
+    }
+
+    &.anim9 {
+        .animation(fadeIn 0.48s ease-in forwards 1.25s);
+    }
+
+    &.anim10 {
+        .animation(fadeIn 0.8s ease-in forwards 1.55s);
+    }
+
+    &.anim11 {
+        .animation(fadeIn 0.48s ease-in forwards 1.75s);
+    }
+
+    &.anim12 {
+        .animation(fadeIn 0.28s ease-in forwards 1.9s);
+    }
+
+    &.anim13 {
+        .animation(fadeIn 0.30s ease-in forwards 2s);
+    }
+}
+
+.cls1 {
+    fill: #f2c80f;
+}
+
+.cls2 {
+  fill: #deba1d;
+}
+
+.cls3 {
+  fill: #4d6165;
+}
+
+.cls4 {
+  opacity: 0.1;
+}
+
+.cls5 {
+  fill: #252f31;
+}
+
+.cls6 {
+  fill: #374649;
+}
+
+.cls7 {
+  fill: gray;
+}
+
+.cls8 {
+  fill: #efd14e;
+}
+
+.cls9 {
+  fill: #f4f4f5;
+}
+
+.cls10 {
+  fill: #e9e9ec;
+}
+
+.cls11 {
+  fill: #a5e5df;
+}
+
+.cls12 {
+  fill: #edeef0;
+}
+
+.cls13 {
+  fill: #c0c1c3;
+}
+
+.cls14 {
+  fill: #111617;
+}
+
+.cls15, .cls16 {
+  fill: #2b5448;
+}
+
+.cls15 {
+  opacity: 0.258;
+}
+
+.cls16, .cls17 {
+  opacity: 0.3;
+}
+
+.cls17 {
+  fill: #5b5b5f;
+}
+
+.cls18 {
+  fill: #445;
+}
+
+.foo path{
+    fill:red;
+}
