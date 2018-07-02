@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2019 5641 1903 418">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2019 5501 1903 558">
   <defs>
     <style>
       .cls-1 {
@@ -13,53 +13,107 @@
     </style>
   </defs>
   <g id="Group_80" data-name="Group 80" transform="translate(2009 4980)">
-    <rect id="Rectangle_55" data-name="Rectangle 55" class="cls-1" width="68" height="224" transform="translate(992 941) rotate(90)"/>
-    <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-1" width="68" height="190" transform="translate(1389 871) rotate(90)"/>
-    <rect id="Rectangle_50" data-name="Rectangle 50" class="cls-1" width="68" height="158" transform="translate(1098 871) rotate(90)"/>
-    <rect id="Rectangle_49" data-name="Rectangle 49" class="cls-1" width="68" height="152" transform="translate(1427 801) rotate(90)"/>
-    <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-1" width="68" height="208" transform="translate(685 801) rotate(90)"/>
-    <rect id="Rectangle_48" data-name="Rectangle 48" class="cls-1" width="68" height="233" transform="translate(475 801) rotate(90)"/>
-    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-1" width="68" height="190" transform="translate(546 1011) rotate(90)"/>
-    <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-1" width="68" height="180" transform="translate(446 941) rotate(90)"/>
-    <rect id="Rectangle_54" data-name="Rectangle 54" class="cls-1" width="68" height="191" transform="translate(673 941) rotate(90)"/>
-    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-1" width="68" height="144" transform="translate(890 871) rotate(90)"/>
-    <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-1" width="68" height="128" transform="translate(1804 1011) rotate(90)"/>
-    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-1" width="68" height="168" transform="translate(1125 1011) rotate(90)"/>
-    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-1" width="68" height="147" transform="translate(562 871) rotate(90)"/>
-    <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="68" height="80" transform="translate(238.5 801) rotate(90)"/>
-    <rect id="Rectangle_51" data-name="Rectangle 51" class="cls-1" width="68" height="126" transform="translate(222.5 731) rotate(90)"/>
-    <rect id="Rectangle_52" data-name="Rectangle 52" class="cls-1" width="68" height="91" transform="translate(126.5 661) rotate(90)"/>
-    <rect id="Rectangle_53" data-name="Rectangle 53" class="cls-1" width="68" height="91" transform="translate(244.5 661) rotate(90)"/>
-    <text id="Javascript" class="cls-2" transform="translate(291 954)"><tspan x="0" y="32">Javascript</tspan></text>
-    <text id="Typescript" class="cls-2" transform="translate(507 954)"><tspan x="0" y="32">Typescript</tspan></text>
-    <text id="Front-end" class="cls-2" transform="translate(378 1022.5)"><tspan x="0" y="32">Front-end</tspan></text>
-    <text id="Usability_test" data-name="Usability test" class="cls-2" transform="translate(789 954)"><tspan x="0" y="32">Usability test</tspan></text>
-    <text id="UI-design" class="cls-2" transform="translate(976 1024.5)"><tspan x="0" y="32">UI-design</tspan></text>
-    <text id="Sketch" class="cls-2" transform="translate(776 884)"><tspan x="0" y="32">Sketch</tspan></text>
-    <text id="Adobe_CS" data-name="Adobe CS" class="cls-2" transform="translate(1225 884)"><tspan x="0" y="32">Adobe CS</tspan></text>
-    <text id="Invision" class="cls-2" transform="translate(966 884)"><tspan x="0" y="32">Invision</tspan></text>
-    <text id="Noodl" class="cls-2" transform="translate(1301 815)"><tspan x="0" y="32">Noodl</tspan></text>
-    <text id="Angular" class="cls-2" transform="translate(434 884)"><tspan x="0" y="32">Angular</tspan></text>
-    <text id="React" class="cls-2" transform="translate(121 745)"><tspan x="0" y="32">React</tspan></text>
-    <text id="React_native" data-name="React native" class="cls-2" transform="translate(495 815)"><tspan x="0" y="32">React native</tspan></text>
-    <text id="Agile_Methods" data-name="Agile Methods" class="cls-2" transform="translate(260 812)"><tspan x="0" y="32">Agile Methods</tspan></text>
-    <text id="GIT" class="cls-2" transform="translate(172 814)"><tspan x="0" y="32">GIT</tspan></text>
-    <text id="Design" class="cls-2" transform="translate(1694 1025)"><tspan x="0" y="32">Design</tspan></text>
-    <text id="scss" class="cls-2" transform="translate(51 674)"><tspan x="0" y="32">scss</tspan></text>
-    <text id="less" class="cls-2" transform="translate(175 674)"><tspan x="0" y="32">less</tspan></text>
-    <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-1" width="68" height="209" transform="translate(1281 941) rotate(90)"/>
-    <rect id="Rectangle_56" data-name="Rectangle 56" class="cls-1" width="68" height="238" transform="translate(1709 661) rotate(90)"/>
-    <rect id="Rectangle_57" data-name="Rectangle 57" class="cls-1" width="68" height="225" transform="translate(1894 871) rotate(90)"/>
-    <rect id="Rectangle_58" data-name="Rectangle 58" class="cls-1" width="68" height="258" transform="translate(1744 801) rotate(90)"/>
-    <rect id="Rectangle_59" data-name="Rectangle 59" class="cls-1" width="68" height="258" transform="translate(1913 731) rotate(90)"/>
-    <text id="Prototyping" class="cls-2" transform="translate(1094 954)"><tspan x="0" y="32">Prototyping</tspan></text>
-    <text id="User_research" data-name="User research" class="cls-2" transform="translate(1493 674)"><tspan x="0" y="32">User research</tspan></text>
-    <text id="Graphic_design" data-name="Graphic design" class="cls-2" transform="translate(1681 744)"><tspan x="0" y="32">Graphic design</tspan></text>
-    <text id="Concept_design" data-name="Concept design" class="cls-2" transform="translate(1506 815)"><tspan x="0" y="32">Concept design</tspan></text>
-    <text id="Visualization" class="cls-2" transform="translate(1696 884)"><tspan x="0" y="32">Visualization</tspan></text>
-    <rect id="Rectangle_60" data-name="Rectangle 60" class="cls-1" width="68" height="434" transform="translate(1865 941) rotate(90)"/>
-    <text id="Customer_Journey_mapping" data-name="Customer Journey mapping" class="cls-2" transform="translate(1455 953)"><tspan x="0" y="32">Customer Journey mapping</tspan></text>
-    <rect id="Rectangle_61" data-name="Rectangle 61" class="cls-1" width="68" height="334" transform="translate(344 871) rotate(90)"/>
-    <text id="Project_management" data-name="Project management" class="cls-2" transform="translate(28 882)"><tspan x="0" y="32">Project management</tspan></text>
+    <g id="Group_106" data-name="Group 106">
+      <g id="Group_94" data-name="Group 94">
+        <rect id="Rectangle_55" data-name="Rectangle 55" class="cls-1" width="68" height="224" transform="translate(992 941) rotate(90)"/>
+        <text id="Usability_test" data-name="Usability test" class="cls-2" transform="translate(789 954)"><tspan x="0" y="32">Usability test</tspan></text>
+      </g>
+      <g id="Group_95" data-name="Group 95">
+        <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-1" width="68" height="168" transform="translate(1125 1011) rotate(90)"/>
+        <text id="UI-design" class="cls-2" transform="translate(976 1024.5)"><tspan x="0" y="32">UI-design</tspan></text>
+      </g>
+      <g id="Group_92" data-name="Group 92">
+        <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-1" width="68" height="136" transform="translate(890 871) rotate(90)"/>
+        <text id="Sketch" class="cls-2" transform="translate(776 884)"><tspan x="0" y="32">Sketch</tspan></text>
+      </g>
+      <g id="Group_97" data-name="Group 97">
+        <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-1" width="68" height="190" transform="translate(1389 871) rotate(90)"/>
+        <text id="Adobe_CS" data-name="Adobe CS" class="cls-2" transform="translate(1225 884)"><tspan x="0" y="32">Adobe CS</tspan></text>
+      </g>
+      <g id="Group_93" data-name="Group 93">
+        <rect id="Rectangle_50" data-name="Rectangle 50" class="cls-1" width="68" height="158" transform="translate(1098 871) rotate(90)"/>
+        <text id="Invision" class="cls-2" transform="translate(966 884)"><tspan x="0" y="32">Invision</tspan></text>
+      </g>
+      <g id="Group_98" data-name="Group 98">
+        <rect id="Rectangle_49" data-name="Rectangle 49" class="cls-1" width="68" height="152" transform="translate(1467 801) rotate(90)"/>
+        <text id="Noodl" class="cls-2" transform="translate(1341 815)"><tspan x="0" y="32">Noodl</tspan></text>
+      </g>
+      <g id="Group_96" data-name="Group 96">
+        <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-1" width="68" height="209" transform="translate(1281 941) rotate(90)"/>
+        <text id="Prototyping" class="cls-2" transform="translate(1094 954)"><tspan x="0" y="32">Prototyping</tspan></text>
+      </g>
+    </g>
+    <g id="Group_107" data-name="Group 107">
+      <g id="Group_104" data-name="Group 104">
+        <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-1" width="68" height="128" transform="translate(1804 1011) rotate(90)"/>
+        <text id="Design" class="cls-2" transform="translate(1694 1025)"><tspan x="0" y="32">Design</tspan></text>
+      </g>
+      <g id="Group_99" data-name="Group 99">
+        <rect id="Rectangle_56" data-name="Rectangle 56" class="cls-1" width="68" height="238" transform="translate(1849 661) rotate(90)"/>
+        <text id="User_research" data-name="User research" class="cls-2" transform="translate(1633 674)"><tspan x="0" y="32">User research</tspan></text>
+      </g>
+      <g id="Group_100" data-name="Group 100">
+        <rect id="Rectangle_59" data-name="Rectangle 59" class="cls-1" width="68" height="258" transform="translate(1913 731) rotate(90)"/>
+        <text id="Graphic_design" data-name="Graphic design" class="cls-2" transform="translate(1681 744)"><tspan x="0" y="32">Graphic design</tspan></text>
+      </g>
+      <g id="Group_101" data-name="Group 101">
+        <rect id="Rectangle_58" data-name="Rectangle 58" class="cls-1" width="68" height="258" transform="translate(1744 801) rotate(90)"/>
+        <text id="Concept_design" data-name="Concept design" class="cls-2" transform="translate(1506 815)"><tspan x="0" y="32">Concept design</tspan></text>
+      </g>
+      <g id="Group_102" data-name="Group 102">
+        <rect id="Rectangle_57" data-name="Rectangle 57" class="cls-1" width="68" height="225" transform="translate(1894 871) rotate(90)"/>
+        <text id="Visualization" class="cls-2" transform="translate(1696 884)"><tspan x="0" y="32">Visualization</tspan></text>
+      </g>
+      <g id="Group_103" data-name="Group 103">
+        <rect id="Rectangle_60" data-name="Rectangle 60" class="cls-1" width="68" height="434" transform="translate(1865 941) rotate(90)"/>
+        <text id="Customer_Journey_mapping" data-name="Customer Journey mapping" class="cls-2" transform="translate(1455 953)"><tspan x="0" y="32">Customer Journey mapping</tspan></text>
+      </g>
+    </g>
+    <g id="Group_105" data-name="Group 105">
+      <g id="Group_83" data-name="Group 83">
+        <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-1" width="68" height="180" transform="translate(446 941) rotate(90)"/>
+        <text id="Javascript" class="cls-2" transform="translate(291 954)"><tspan x="0" y="32">Javascript</tspan></text>
+      </g>
+      <g id="Group_82" data-name="Group 82">
+        <rect id="Rectangle_54" data-name="Rectangle 54" class="cls-1" width="68" height="191" transform="translate(673 941) rotate(90)"/>
+        <text id="Typescript" class="cls-2" transform="translate(507 954)"><tspan x="0" y="32">Typescript</tspan></text>
+      </g>
+      <g id="Group_81" data-name="Group 81">
+        <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-1" width="68" height="190" transform="translate(546 1011) rotate(90)"/>
+        <text id="Front-end" class="cls-2" transform="translate(378 1022.5)"><tspan x="0" y="32">Front-end</tspan></text>
+      </g>
+      <g id="Group_85" data-name="Group 85">
+        <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-1" width="68" height="147" transform="translate(562 871) rotate(90)"/>
+        <text id="Angular" class="cls-2" transform="translate(434 884)"><tspan x="0" y="32">Angular</tspan></text>
+      </g>
+      <g id="Group_89" data-name="Group 89">
+        <rect id="Rectangle_51" data-name="Rectangle 51" class="cls-1" width="68" height="126" transform="translate(222.5 731) rotate(90)"/>
+        <text id="React" class="cls-2" transform="translate(121 745)"><tspan x="0" y="32">React</tspan></text>
+      </g>
+      <g id="Group_86" data-name="Group 86" transform="translate(30)">
+        <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-1" width="68" height="208" transform="translate(215 591) rotate(90)"/>
+        <text id="React_native" data-name="React native" class="cls-2" transform="translate(25 605)"><tspan x="0" y="32">React native</tspan></text>
+      </g>
+      <g id="Group_87" data-name="Group 87" transform="translate(14)">
+        <rect id="Rectangle_48" data-name="Rectangle 48" class="cls-1" width="68" height="233" transform="translate(475 801) rotate(90)"/>
+        <text id="Agile_Methods" data-name="Agile Methods" class="cls-2" transform="translate(260 812)"><tspan x="0" y="32">Agile Methods</tspan></text>
+      </g>
+      <g id="Group_88" data-name="Group 88">
+        <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="68" height="85" transform="translate(238.5 801) rotate(90)"/>
+        <text id="GIT" class="cls-2" transform="translate(172 814)"><tspan x="0" y="32">GIT</tspan></text>
+      </g>
+      <g id="Group_91" data-name="Group 91" transform="translate(1.5)">
+        <rect id="Rectangle_52" data-name="Rectangle 52" class="cls-1" width="68" height="89.5" transform="translate(125 521) rotate(90)"/>
+        <text id="scss" class="cls-2" transform="translate(50.745 534)"><tspan x="0" y="32">scss</tspan></text>
+      </g>
+      <g id="Group_90" data-name="Group 90">
+        <rect id="Rectangle_53" data-name="Rectangle 53" class="cls-1" width="68" height="91" transform="translate(244.5 661) rotate(90)"/>
+        <text id="less" class="cls-2" transform="translate(175 674)"><tspan x="0" y="32">less</tspan></text>
+      </g>
+      <g id="Group_84" data-name="Group 84">
+        <rect id="Rectangle_61" data-name="Rectangle 61" class="cls-1" width="68" height="334" transform="translate(344 871) rotate(90)"/>
+        <text id="Project_management" data-name="Project management" class="cls-2" transform="translate(28 883)"><tspan x="0" y="32">Project management</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>

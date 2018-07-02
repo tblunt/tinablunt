@@ -3,6 +3,7 @@ import { observer } from "mobx-react";
 
 import backgroundImageController from './backgrundImage.controller';
 import AmImage from './amImage.component';
+import KnowImage from './knowImage.component';
 
 import styles from './backgroundImageViewer.component.less';
 
@@ -20,6 +21,11 @@ const BackgroundImageViewer = observer(class BackgroundImageViewer extends React
       if(renderType == 'am') {
         return (
           <AmImage />
+        );
+      }
+      else if(renderType == 'know') {
+        return (
+          <KnowImage />
         );
       }
 
