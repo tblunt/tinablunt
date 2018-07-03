@@ -1,0 +1,97 @@
+@import '../../config/variables';
+@import '../../config/mixins';
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } 
+  
+  .svg {
+    position: absolute;
+    left:5%;
+    right:5%;
+    width: 90%;
+    height: auto;
+    bottom:0;
+    pointer-events: none;
+  }
+
+   
+.fadeInAnimation {
+  opacity: 0;
+
+  .animation(fadeIn 0.4s ease-in forwards 0.2s);
+
+  &.anim1 {
+      .animation(fadeIn 0.4s ease-in forwards 0.4s);
+  }
+
+  &.anim2 {
+      .animation(fadeIn 0.5s ease-in forwards 0.6s);
+  }
+
+  &.anim3 {
+    .animation(fadeIn 0.45s ease-in forwards 0.8s);
+  }
+
+  &.anim4 {
+    .animation(fadeIn 0.35s ease-in forwards 1s);
+  }
+
+  &.anim5 {
+    .animation(fadeIn 0.35s ease-in forwards 1.2s);
+  }
+
+}
+
+.cls1 {
+    fill: #e9e9ec;
+  }
+
+  .cls2 {
+    fill: #02a599;
+  }
+
+  .cls3 {
+    fill: #01b8aa;
+  }
+
+  .cls4 {
+    fill: #c0c1c3;
+  }
+
+  .cls5 {
+    fill: #f4f4f5;
+  }
+
+  .cls6 {
+    fill: #03887e;
+  }
+
+  .cls7 {
+    fill: #374649;
+  }
+
+  .cls8 {
+    fill: #4d6165;
+  }
+
+  .cls9 {
+    fill: #111617;
+  }
+
+  .cls10 {
+    fill: #006f67;
+  }
+
+  .cls11 {
+    fill: #ccc;
+  }
+
+  .cls12 {
+    fill: #999;
+  }
+
+  .cls13 {
+    fill: #4c6064;
+  }
