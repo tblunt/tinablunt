@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import scrollHelper from './component/navigation/scrollHelper.js';
 import Navigation from './component/navigation/navigation.js';
 import BackgroundImageViewer from './component/backgroundImageViewer/backgroundImageViewer.component';
+import backgroundImageController from './component/backgroundImageViewer/backgrundImage.controller';
 
 import StartView from './view/start/start.view.js';
 
@@ -19,7 +20,7 @@ const App = observer(class App_ extends React.Component {
 	}
 
 	render() {
-
+	
 		return (
 			<div className={styles.app}>
 				<Navigation></Navigation>

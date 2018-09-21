@@ -1,15 +1,15 @@
 import React from 'react';
+import { observer } from "mobx-react";
 
 import Container from '../container/container.component';
 import backgroundImageController from '../backgroundImageViewer/backgrundImage.controller';
-
 
 import NavigationItem from './navigationItem.component';
 
 
 import styles from './navigation.less';
 
-class Navigation extends React.Component {
+const Navigation = observer(class Navigation extends React.Component {
 	constructor(props) {
 		super(props);
 		
@@ -18,9 +18,11 @@ class Navigation extends React.Component {
 	}
   
       render() {
+		let isAnyActive = backgroundImageController.highlightedItem.selected != null;
+		let minimized = isAnyActive ? styles.minimized : '';
         
 		return (
-			<div className={styles.navigationWrapper}>
+			<div className={styles.navigationWrapper + ' ' + minimized}>
 				<Container>
 					<div className={styles.textContent}>
 						<h1 styleName={styles.pageTitle}>Hi!</h1>
@@ -30,9 +32,11 @@ class Navigation extends React.Component {
 					
 					<div className={styles.navigation}>
 						{backgroundImageController.navigationItems.map((navItem)=>{
-							return (<NavigationItem 	
-								title={navItem.title}
-								color={navItem.color} />);
+							return (
+								<NavigationItem 	
+									title={navItem.title}
+									color={navItem.color} />
+							);
 						})}
 						
 					</div>
@@ -42,7 +46,7 @@ class Navigation extends React.Component {
 			</div>
 		);
 	}
-}
+});
 
     
 export default Navigation;

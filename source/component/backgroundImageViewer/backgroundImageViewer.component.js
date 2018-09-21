@@ -16,30 +16,48 @@ const BackgroundImageViewer = observer(class BackgroundImageViewer extends React
 		this.state = {};
 
   }
-  
-    render() {
-      let renderType = backgroundImageController.hoveredItem.title;
-      if(renderType == 'am') {
-        return (
-          <AmImage />
-        );
-      }
-      else if(renderType == 'know') {
-        return (
-          <KnowImage />
-        );
-      }
-      else if(renderType == 'do') {
-        return (
-          <DoImage />
-        );
-      }
 
+  getRenderType() {
+    if(!backgroundImageController.highlightedItem.selected) {
+      return backgroundImageController.highlightedItem.hovered;
+    }
+
+    return backgroundImageController.highlightedItem.selected;
+  }
+  
+  render() {
+    let renderType = this.getRenderType();
+
+    let isAnyActive = backgroundImageController.highlightedItem.selected != null;
+		let minimized = isAnyActive ? styles.minimized : '';
+    
+    if(renderType == 'am') {
       return (
-        <div></div>
-      )
-     
-    }s
+        <div className={styles.backgroundWrapper + ' ' +minimized}>
+          <AmImage />
+        </div>
+      );
+    }
+    else if(renderType == 'know') {
+      return (
+        <div className={styles.backgroundWrapper + ' ' +minimized}>
+          <KnowImage />
+        </div>
+      );
+    }
+    else if(renderType == 'do') {
+      return (
+        <div className={styles.backgroundWrapper + ' ' +minimized}>
+          <DoImage />
+        </div>
+      );
+    }
+
+    return (
+      <div></div>
+    )
+  
+  }
 });
 
     

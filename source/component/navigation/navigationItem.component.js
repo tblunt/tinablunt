@@ -22,13 +22,22 @@ class NavigationItem extends React.Component {
 
         return styles.yellow;
     }
+
+    handleClick() {
+        backgroundImageController.setSelected(this.props.title);
+    }
   
     render() {
         let colorStyle = this.setColor();
+        let selectedStyle = (backgroundImageController.highlightedItem.selected == this.props.title)? styles.active: '';
+
+        let isAnyActive = backgroundImageController.highlightedItem.selected != null;
+		let minimized = isAnyActive ? styles.minimized : '';
        
 		return (
             <div 
-                className={styles.menuItem + ' ' + colorStyle} 
+                className={styles.menuItem + ' ' + colorStyle + ' '+ selectedStyle + ' ' + minimized} 
+                onClick={()=>this.handleClick()}
                 onMouseEnter={()=>backgroundImageController.setHovered(this.props.title)} 
                 onMouseLeave={()=>backgroundImageController.setHovered(null)} >
 

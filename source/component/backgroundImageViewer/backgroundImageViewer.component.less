@@ -1,0 +1,12 @@
+@import '../../config/variables';
+@import '../../config/mixins';
+
+.backgroundWrapper {
+    opacity: 1;
+    .transition(opacity ease-in 0.25s 0.2s);
+
+    &.minimized {
+        opacity: 0.3;
+        .transition(opacity ease-in 2s 0.5s);
+    }
+}

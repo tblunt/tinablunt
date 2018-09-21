@@ -16,8 +16,9 @@ class BackgroundImageController {
 		}
 	]
 
-	hoveredItem = observable({
-		title: null,
+	highlightedItem = observable({
+		hovered: null,
+		selected: null
 	});
 	
 	
@@ -26,7 +27,11 @@ class BackgroundImageController {
 	}
 
 	setHovered(navItemTitle) {
-		this.hoveredItem.title = navItemTitle;
+		this.highlightedItem.hovered = navItemTitle;
+	}
+
+	setSelected(navItemTitle) {
+		this.highlightedItem.selected = (navItemTitle != this.highlightedItem.selected) ? navItemTitle : null;	
 	}
 	
 }

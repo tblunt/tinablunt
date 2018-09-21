@@ -73,7 +73,7 @@
         right:50%;
     }
 
-    &:hover {
+    &:hover, &.active {
         cursor: pointer;
 
         &.yellow {
@@ -104,6 +104,17 @@
                 border-color: rgba(255,255,255,1);
             }
         } 
+    }
+
+    &.minimized {
+        .title {
+            font-size: 1rem;
+            .transition(all ease-in 0.25s 0.2s);
+        }
+
+        .menuItemCircle, .menuItemHoverCircle {
+            .transform(scale(0.5));
+        }
     }
 }
 
