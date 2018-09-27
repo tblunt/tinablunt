@@ -1,5 +1,27 @@
+@import '../../config/variables';
+@import '../../config/mixins';
+
 .container {
     width: 100%;
     margin:0 auto;
-    text-align: center;
+    text-align: left;
+    max-width: 35rem;
+    padding: 2rem 2rem 8rem 2rem;
+    .box-sizing(border-box);
+
+    h1 {
+        text-align: center;
+    }
+
+
+    h3 {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        display: inline-block;
+        border-bottom: 2px solid @text_color;
+    }
+
+    p {
+        line-height: 1.4rem;
+    }
 }

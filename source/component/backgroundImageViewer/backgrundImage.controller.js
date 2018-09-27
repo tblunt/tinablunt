@@ -26,12 +26,12 @@ class BackgroundImageController {
 		
 	}
 
-	setHovered(navItemTitle) {
-		this.highlightedItem.hovered = navItemTitle;
+	setHovered(navItem) {
+		this.highlightedItem.hovered = navItem;
 	}
 
-	setSelected(navItemTitle) {
-		this.highlightedItem.selected = (navItemTitle != this.highlightedItem.selected) ? navItemTitle : null;	
+	setSelected(navItem) {
+		this.highlightedItem.selected =  (this.highlightedItem.selected && navItem.title == this.highlightedItem.selected.title) ? null : navItem;	
 	}
 	
 }

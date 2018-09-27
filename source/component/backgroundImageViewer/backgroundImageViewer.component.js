@@ -31,21 +31,26 @@ const BackgroundImageViewer = observer(class BackgroundImageViewer extends React
     let isAnyActive = backgroundImageController.highlightedItem.selected != null;
 		let minimized = isAnyActive ? styles.minimized : '';
     
-    if(renderType == 'am') {
+    if(renderType && renderType.title == 'am') {
       return (
         <div className={styles.backgroundWrapper + ' ' +minimized}>
-          <AmImage />
+          <div className={styles.faded}>
+            <AmImage faded={true}/>
+          </div>
+          <div className={styles.colored}>
+            <AmImage/>
+          </div>
         </div>
       );
     }
-    else if(renderType == 'know') {
+    else if(renderType && renderType.title == 'know') {
       return (
         <div className={styles.backgroundWrapper + ' ' +minimized}>
           <KnowImage />
         </div>
       );
     }
-    else if(renderType == 'do') {
+    else if(renderType && renderType.title == 'do') {
       return (
         <div className={styles.backgroundWrapper + ' ' +minimized}>
           <DoImage />

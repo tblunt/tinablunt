@@ -14,8 +14,8 @@ var config = {
 		port: 8080,
 		proxy: {
 			// !!!:Debug
-			// '/CODECODE':{
-			// 	pathRewrite: {'^/CODECODE$' : '/index.html'},
+			// '/know':{
+			// 	pathRewrite: {'^/know' : '/index.html'},
 			// 	target:'http://localhost:8080'
 			// },
 

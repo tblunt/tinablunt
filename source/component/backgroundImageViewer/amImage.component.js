@@ -12,8 +12,10 @@ const AmImage = class AmImage extends React.Component {
   }
   
   render() {
+    let faded = this.props.faded ? styles.faded : '';
+    
     return (
-      <svg viewBox="21.923 1691 1883.692 556.85" className={styles.svg}>
+      <svg viewBox="21.923 1691 1883.692 556.85" className={styles.svg + ' '+ faded}>
 
       <g id="Group_78" data-name="Group 78" transform="translate(0 1168)">
 

@@ -8,5 +8,22 @@
     &.minimized {
         opacity: 0.3;
         .transition(opacity ease-in 2s 0.5s);
+
+        // .faded {
+        //     opacity: 1;
+        // }
+
+        .colored {
+            opacity: 0;
+            .transition(opacity ease-in 2s);
+        }
     }
+
+    .colored {
+        opacity: 1;
+        .transition(opacity ease-in 2s);
+    }
+    // .faded {
+    //     opacity: 0;
+    // }
 }

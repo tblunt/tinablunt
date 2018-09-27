@@ -2,10 +2,10 @@ import React from 'react';
 
 import Container from '../../component/container/container.component';
 
-import styles from './start.view.less';
+import styles from './know.view.less';
 
 
-class StartView extends React.Component {
+class KnowView extends React.Component {
 	constructor(props) {
 		super(props);
 		
@@ -19,7 +19,7 @@ class StartView extends React.Component {
 		return (
 			<div>
 				<Container>
-
+					<h1>Know</h1>
 				</Container>
 				
 			</div>
@@ -28,4 +28,4 @@ class StartView extends React.Component {
 }
 
 
-export default StartView;
+export default KnowView;

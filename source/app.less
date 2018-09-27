@@ -29,6 +29,26 @@ body{
 	.justify-content(center);
 	.align-items(flex-start);
 	.flex(1);
+
+	.routerWrapper{
+		opacity: 0;
+		display: block;
+		width:100%;
+		pointer-events: none;
+		position: absolute;
+		top:@headerHeight;
+		bottom:0;
+		left:0;
+		right:0;
+		overflow: auto;
+
+		&.visible {
+			opacity: 1;
+			pointer-events: auto;
+			.transition(all ease-in 0.5s 0.5s);
+		}
+	}
+	
 }
 
 h1, h2,h3,h4, p{
