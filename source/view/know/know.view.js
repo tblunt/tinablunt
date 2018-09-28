@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Container from '../../component/container/container.component';
+import Spinner from '../../component/spinner/spinner.component';
 
 import styles from './know.view.less';
 
@@ -19,7 +20,10 @@ class KnowView extends React.Component {
 		return (
 			<div>
 				<Container>
-					<h1>Know</h1>
+					<div className={styles.spinnerWrapper}>
+						<Spinner />
+						<p>Tina is typing</p>
+					</div>
 				</Container>
 				
 			</div>
