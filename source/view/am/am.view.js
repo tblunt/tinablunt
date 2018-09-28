@@ -28,6 +28,14 @@ class AmView extends React.Component {
 						<p>master of science in media technology where my main focus was software development, design and information visualization.</p>
 					</div>
 					<div className={styles.paragraph}>
+						<h3>I started working</h3>
+						<p>in the advertising industry as a front-end devoloper in mainly web applications, with business to business compaign sites and apps. After that I became an IT consultant and started working on a lot more business critical systems and realized the power and importans of great UX and all its processes and tools.</p>
+					</div>
+					<div className={styles.paragraph}>
+						<h3>I now work</h3>
+						<p>as a technical UX-designer. Mainly with interaction design, but I have a tendancy to demand that projects apply a broader spectrum of the design process. Which often lands on my table to execute. I haven't left the coding world, but now I only deliver specific Angular or React components (especially because I love coding graphs) or provide front-end architectural support.</p>
+					</div>
+					<div className={styles.paragraph}>
 						<h3>When I don't work</h3>
 						<p>I spend a lot of time sewing clothes, watching series, rock climbing and drinking beer with my friends and family.</p>
 					</div>
