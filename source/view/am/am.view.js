@@ -41,7 +41,7 @@ class AmView extends React.Component {
 					</div>
 					<div className={styles.paragraph}>
 						<h3>I grew up</h3>
-						<p>in a basketball family and ended up dedicating 12 years and a LOT of time to the game. Until I injured my knee for the last time. I think my basketball career built the ground I stand on today. Mostly because it went to hell. Nothing went as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. </p>
+						<p>in a basketball family and ended up dedicating 12 years and a LOT of time to the game (until I injured my knee for the last time). I think my basketball career built the ground I stand on today. Mostly because it went to hell. Nothing went as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. </p>
 					</div>
 					
 				</Container>
