@@ -12,8 +12,10 @@ class KnowImage extends React.Component {
     }
 
     render() {
+        let faded = this.props.faded ? styles.faded : '';
+
         return (
-            <svg viewBox="2019 5641 1903 418" className={styles.svg}>
+            <svg viewBox="2019 5641 1903 418" className={styles.svg + ' '+ faded}>
 
                 <g id="Group_80" data-name="Group 80" transform="translate(2009 4980)">
 

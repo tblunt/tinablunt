@@ -46,7 +46,13 @@ const BackgroundImageViewer = observer(class BackgroundImageViewer extends React
     else if(renderType && renderType.title == 'know') {
       return (
         <div className={styles.backgroundWrapper + ' ' +minimized}>
+         <div className={styles.faded}>
+          <KnowImage faded={true} />
+         </div>
+         <div className={styles.colored}>
           <KnowImage />
+         </div>
+         
         </div>
       );
     }
