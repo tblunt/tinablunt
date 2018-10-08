@@ -12,6 +12,7 @@ class KnowView extends React.Component {
 		
 		this.state = {};
 
+	
 	}
 	
 	
@@ -20,11 +21,25 @@ class KnowView extends React.Component {
 		return (
 			<div>
 				<Container>
+					<div className={styles.imagesWrapper}>
+						<div>
+							<img src={"/asset/image/problem.png"} />
+							<div>1</div>
+						</div>
+						<div>
+							<img src={"/asset/image/money.png"} />
+							<div>2</div>
+						</div>
+						<div>
+							<img src={"/asset/image/solution.png"} />
+							<div>3</div>
+						</div>
+					</div>
+					<div></div>
 					<Paragraph>
-						<h3>Here it is</h3>
 						<p>1. People have problems.</p>
 						<p>2. People are willing to pay money to eliminate their problems. </p>
-						<p>3. Other people can therefore make money of solving people's problems. </p>
+						<p>3. Other people can therefore make money on solving people's problems. </p>
 						<br />
 						<p>Not really rocket science! This only explains the foundation to very many business opportunities. </p>
 					</Paragraph>
