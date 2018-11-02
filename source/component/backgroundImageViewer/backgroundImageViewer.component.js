@@ -59,7 +59,13 @@ const BackgroundImageViewer = observer(class BackgroundImageViewer extends React
     else if(renderType && renderType.title == 'do') {
       return (
         <div className={styles.backgroundWrapper + ' ' +minimized}>
+         
+          <div className={styles.faded}>
+          <DoImage faded={true} />
+         </div>
+         <div className={styles.colored}>
           <DoImage />
+         </div>
         </div>
       );
     }

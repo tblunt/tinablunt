@@ -12,8 +12,10 @@ class DoImage extends React.Component {
     }
 
     render() {
+        let faded = this.props.faded ? styles.faded : '';
+
         return (
-            <svg className={styles.svg} viewBox="4039.952 5596 1861.244 444.001">
+            <svg className={styles.svg + ' '+ faded} viewBox="4039.952 5596 1861.244 444.001">
             <g id="Group_109" data-name="Group 109" transform="translate(4007 4959)">
             
             {/* pencil person */}
