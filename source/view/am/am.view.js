@@ -20,6 +20,11 @@ class AmView extends React.Component {
 		return (
 			<div>
 				<Container color={this.props.color}>
+					<div className={styles.imagesWrapper}>
+						<img src={"/asset/image/tinaCircle.png"} />	
+						<img className={styles.hoverImage} src={"/asset/image/tinaCircle2.png"} />	
+					</div>
+					<div></div>
 					<Paragraph>
 						<h3>I am</h3>
 						<p>an outgoing and driven lady in my thirties. I am born and raised in Stockholm, but my current home is in Norrköping (and has been for more than ten years now).</p>

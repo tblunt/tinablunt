@@ -18,8 +18,7 @@ const App = observer(class App_ extends React.Component {
 
 		this.state = {
             isScrollOnTop: true,
-			isScrollOnBottom: false,
-			selectedView: backgroundImageController.highlightedItem.selected
+			isScrollOnBottom: false
         }
 
         this.setScrollableContentEvents = this.setScrollableContentEvents.bind(this);
@@ -28,7 +27,7 @@ const App = observer(class App_ extends React.Component {
 	}
 
 	componentDidUpdate() {
-		let selectedTitle = backgroundImageController.highlightedItem.selected.title;
+		let selectedTitle = backgroundImageController.highlightedItem.selected ? backgroundImageController.highlightedItem.selected.title : null;
 		let isViewChanged = selectedTitle && selectedTitle != this.previousViewTitle;
 		
         if(isViewChanged) {

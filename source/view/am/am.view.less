@@ -1,0 +1,36 @@
+@import '../../config/variables';
+@import '../../config/mixins';
+
+
+
+.imagesWrapper {
+    width: 100%;
+    text-align: center;
+    height: 15rem;
+    position: relative;
+
+    img {
+        height: 100%;
+        width:auto;
+
+        &.hoverImage {
+            opacity: 0;
+            position: absolute;
+            height: 15rem;
+            width:15rem;
+            margin: 0 auto;
+            left:50%;
+            top:0;
+            .transform(translateX(-50%));
+            .transition(opacity ease-in 0.25s);
+        }
+
+    }
+
+    &:hover {
+        .hoverImage {
+            opacity:1;
+            .transition(opacity ease-in 0.25s);
+        }
+    }
+}
