@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactDOM} from 'react';
 import { observer } from "mobx-react";
 
 import Navigation from './component/navigation/navigation.js';
@@ -15,9 +15,54 @@ import styles from './app.less';
 const App = observer(class App_ extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+            isScrollOnTop: true,
+			isScrollOnBottom: false,
+			selectedView: backgroundImageController.highlightedItem.selected
+        }
+
+        this.setScrollableContentEvents = this.setScrollableContentEvents.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
 		
-		this.state = {};
 	}
+
+	componentDidUpdate() {
+		let selectedTitle = backgroundImageController.highlightedItem.selected.title;
+		let isViewChanged = selectedTitle && selectedTitle != this.previousViewTitle;
+		
+        if(isViewChanged) {
+			this.scrollableElement.scrollTop = 0; 
+		}
+
+		this.previousViewTitle = selectedTitle;
+    }
+
+	setScrollableContentEvents(elem) {
+        this.scrollableElement = elem;
+        elem.addEventListener('scroll', this.handleScroll);
+	}
+	
+	handleScroll(event) {
+       
+        if(event && event.target) {
+            let visibleThreshold = 30;
+            let scrollPos = event.target.scrollTop;
+            let elemHeight = event.target.clientHeight;
+            let scrollContentHeight = event.target.scrollHeight;
+            let maxScrollDistance = scrollContentHeight - elemHeight;
+
+            this.setState({
+                isScrollOnTop: scrollPos < visibleThreshold,
+                isScrollOnBottom: scrollPos > (maxScrollDistance - visibleThreshold)
+            });
+        }
+        
+	}
+	
+	componentWillUnmount() {
+        this.scrollableElement.removeEventListener('scroll', this.handleScroll);
+    }
 
 	renderView() {
 		let selectedColor = backgroundImageController.highlightedItem.selected.color;
@@ -30,17 +75,20 @@ const App = observer(class App_ extends React.Component {
 		}
 		
 		return (<AmView color={selectedColor} />);
-		 
+		
 	}
+
 
 	render() {
 		let isAnyActive = backgroundImageController.highlightedItem.selected != null;
 		let visible = isAnyActive ? styles.visible : '';
-	
+		let topBorder = this.state.isScrollOnTop ? ' ': styles.topBorder;
+
 		return (
 			<div className={styles.app}>
 				<Navigation></Navigation>
-				<div className={styles.routerWrapper + ' ' + visible}>
+				{!this.state.isScrollOnTop && <div className={styles.topFader}></div>}
+				<div ref={this.setScrollableContentEvents} className={styles.routerWrapper + ' ' + visible + ' ' + topBorder}>
 					{backgroundImageController.highlightedItem.selected && this.renderView()}
 				</div>
 				<BackgroundImageViewer />
