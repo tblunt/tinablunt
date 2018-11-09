@@ -39,14 +39,18 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.1",
+    "d3": "3.5.17",
     "fast-deep-equal": "^1.0.0",
     "file-loader": "^1.1.5",
     "history": "^4.7.2",
     "json-schema-traverse": "^0.3.1",
     "mobx-react": "^4.3.5",
     "react-browser-detection": "^1.1.1",
+    "react-ga": "^2.5.3",
     "react-router-dom": "^4.3.1",
     "react-stripe-elements": "^1.5.0",
+    "underscore": "^1.9.1",
+    "url-loader": "^0.6.2",
     "whatwg-fetch": "^2.0.3"
   }
 }

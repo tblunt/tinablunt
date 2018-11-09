@@ -1,25 +1,232 @@
 import React from 'react';
+import * as _ from "underscore";
 
 import Container from '../../component/container/container.component';
 import Paragraph from '../../component/paragraph/paragraph.component';
+
+import Pie from './component/pie.component';
 
 import styles from './know.view.less';
 
 
 class KnowView extends React.Component {
+	
 	constructor(props) {
 		super(props);
 		
-		this.state = {};
-
-	
+		this.state = {
+			selectedGraph: 0,
+			chartData: this.getDevelopmentData()
+		}
 	}
-	
+
+	changeGraph(graphIndex) {
+		if(graphIndex == 0) {
+			this.setState({
+				selectedGraph:0,
+				chartData: this.getDevelopmentData()
+			});
+		}
+		else if(graphIndex == 1) {
+			this.setState({
+				selectedGraph:1,
+				chartData: this.getDesignData()
+			});
+		}
+		else if(graphIndex == 2) {
+			this.setState({
+				selectedGraph:2,
+				chartData: this.getLeadershipData()
+			});
+		}
+	}
+
+	getDevelopmentData() {
+		return  [
+			{
+				index:0,
+				label: "React",
+				value: 3
+			},
+			{
+				index:1,
+			  label: "javascript",
+			  value: 3
+			},
+			{
+				index:2,
+			  label: "html/css",
+			  value: 3
+			},
+			{
+				index:3,
+			  label: "Angular",
+			  value: 3
+			},
+			{
+				index:4,
+			  label: "AngularJS",
+			  value: 3
+			},
+			{
+				index:5,
+			  label: "GIT",
+			  value: 3
+			},
+			{
+				index:6,
+			  label: "TFS",
+			  value: 3
+			},
+			{
+				index:7,
+			  label: "d3.js",
+			  value: 3
+			},
+			{
+				index:8,
+			  label: "WebGL",
+			  value: 3
+			},
+			{
+				index:9,
+			  label: "Typescript",
+			  value: 3
+			},
+			{
+				index:10,
+			  label: "React native",
+			  value: 3
+			},
+			{
+				index:11,
+			  label: "less",
+			  value: 3
+			},
+			{
+				index:12,
+			  label: "Unity3D",
+			  value: 3
+			},
+			{
+				index:13,
+				label: "AR",
+				value: 3
+			  },
+			{
+				index:14,
+			  label: "sass",
+			  value: 3
+			}
+		  ];
+	}
+
+	getDesignData() {
+		return  [
+			{
+				index:0,
+			  label: "User tests",
+			  value: 3
+			},
+			{
+				index:1,
+			  label: "Workshop",
+			  value: 3
+			},
+			{
+				index:2,
+			  label: "InVision",
+			  value: 3
+			},
+			{
+				index:3,
+			  label: "Interaction design",
+			  value: 3
+			},
+			{
+				index:4,
+			  label: "Adobe XD",
+			  value: 3
+			},
+			{
+				index:5,
+			  label: "Sketch",
+			  value: 3
+			},
+			{
+				index:6,
+			  label: "Visualization",
+			  value: 3
+			},
+			{
+				index:7,
+			  label: "UX-design",
+			  value: 3
+			},
+			{
+				index:8,
+			  label: "Concept design",
+			  value: 3
+			},
+			{
+				index:9,
+			  label: "User research",
+			  value: 3
+			},
+			{
+				index:10,
+				label: "Prototyping",
+				value: 3
+			}
+		  ];
+	}
+
+	getLeadershipData() {
+		return  [
+			{
+				index:0,
+				label: "Technical project manager",
+				value: 3
+			},
+			{
+				index:1,
+				label: "Scrum",
+				value: 3
+			},
+			{
+				index:2,
+				label: "Scrum master",
+				value: 3
+			},
+			{
+				index:3,
+				label: "Agile development",
+				value: 3
+			},
+			{
+				index:4,
+				label: "Front-end lead",
+				value: 3
+			},
+			{
+				index:5,
+				label: "UX lead",
+				value: 3
+			}
+		  ];
+	}
+
 	
 	render() {
 		
 		return (
 			<div className={styles.knowView}>
+				<div className={styles.buttonGroup}>
+					<div onClick={()=>this.changeGraph(0)} className={(this.state.selectedGraph == 0 ? styles.active: '')}>Development</div>
+					<div onClick={()=>this.changeGraph(1)} className={(this.state.selectedGraph == 1 ? styles.active: '')}>Design</div>
+					<div onClick={()=>this.changeGraph(2)} className={(this.state.selectedGraph == 2 ? styles.active: '')}>Leadership</div>
+				</div>
+				<Pie data={this.state.chartData} />
 				<Container>
 					<Paragraph>
 						<h3>Siemens <br></br><span>april 2018 - ongoing</span></h3>

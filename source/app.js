@@ -1,5 +1,6 @@
 import React, {ReactDOM} from 'react';
 import { observer } from "mobx-react";
+import ReactGA from 'react-ga'; 
 
 import Navigation from './component/navigation/navigation.js';
 import BackgroundImageViewer from './component/backgroundImageViewer/backgroundImageViewer.component';
@@ -19,7 +20,10 @@ const App = observer(class App_ extends React.Component {
 		this.state = {
             isScrollOnTop: true,
 			isScrollOnBottom: false
-        }
+		}
+		
+		ReactGA.initialize('UA-43724495-1');
+		ReactGA.pageview(window.location.pathname);
 
         this.setScrollableContentEvents = this.setScrollableContentEvents.bind(this);
         this.handleScroll = this.handleScroll.bind(this);

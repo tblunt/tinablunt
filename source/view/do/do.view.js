@@ -1,4 +1,5 @@
 import React from 'react';
+var images = require.context('../../../asset/image', true);
 
 import Container from '../../component/container/container.component';
 import Paragraph from '../../component/paragraph/paragraph.component';
@@ -19,18 +20,19 @@ class DoView extends React.Component {
 		
 		return (
 			<div>
+				
 				<Container>
 					<div className={styles.imagesWrapper}>
 						<div>
-							<img src={"/asset/image/problem.png"} />
+							<img src={images(`./problem.png`)} />
 							<div>1</div>
 						</div>
 						<div>
-							<img src={"/asset/image/money.png"} />
+							<img src={images(`./money.png`)} />
 							<div>2</div>
 						</div>
 						<div>
-							<img src={"/asset/image/solution.png"} />
+							<img src={images(`./solution.png`)} />
 							<div>3</div>
 						</div>
 					</div>

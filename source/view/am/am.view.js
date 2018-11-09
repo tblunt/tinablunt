@@ -1,4 +1,5 @@
 import React from 'react';
+var images = require.context('../../../asset/image', true);
 
 import Container from '../../component/container/container.component';
 import Paragraph from '../../component/paragraph/paragraph.component';
@@ -10,19 +11,35 @@ class AmView extends React.Component {
 	constructor(props) {
 		super(props);
 		
-		this.state = {};
+		this.state = {
+			imgPath: null
+		};
+		this.randomizer = 1;
+		let img1 = images(`./tinaCircle2.png`);
+		let img2 = images(`./tinaCircle3.png`);
+		let img3 = images(`./tinaCircle4.png`);
+		
+		this.images = [img1, img2, img3];
 
+		this.setRandomizer = this.setRandomizer.bind(this);
 	}
-	
+
+	setRandomizer() {
+		this.randomizer = Math.floor(Math.random() * this.images.length);
+		
+		this.setState({
+			imgPath : this.images[this.randomizer]
+		});
+	}
 	
 	render() {
 		
 		return (
 			<div>
 				<Container color={this.props.color}>
-					<div className={styles.imagesWrapper}>
+					<div className={styles.imagesWrapper} onMouseEnter={()=>this.setRandomizer()}>
 						<img src={"/asset/image/tinaCircle.png"} />	
-						<img className={styles.hoverImage} src={"/asset/image/tinaCircle2.png"} />	
+						<img className={styles.hoverImage} src={this.state.imgPath} />	
 					</div>
 					<div></div>
 					<Paragraph>
