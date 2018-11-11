@@ -13,209 +13,243 @@ class KnowView extends React.Component {
 	
 	constructor(props) {
 		super(props);
+
+		this.developmentChartData = [];
+		this.designChartData = [];
+		this.leadershipChartData = [];
 		
 		this.state = {
 			selectedGraph: 0,
-			chartData: this.getDevelopmentData()
+			chartData: this.developmentChartData
 		}
+
+		this.tags = {
+			development: {
+				react: 'React',
+				js: 'Javascript',
+				htmlcss: 'html/css',
+				angular: 'Angular',
+				angularJS: "AngularJS",
+				typescript: "Typescript",
+				reactNative: "React native",
+				git: "GIT",
+				tfs: "TFS",
+				d3: "d3.js",
+				webgl: "WebGL",
+				less: "less",
+				unity: "Unity3D",
+				ar: "AR",
+				sass: "sass",
+				mobileApp: "App development",
+				web: "Web development"
+			},
+			design: {
+				userTest: "User tests",
+				workshop: "Workshop",
+				invision: "InVision",
+				ui: "UI design",
+				adobexd: "Adobe XD",
+				abobecs: "Adobe CS",
+				sketch: "Sketch",
+				visualization: "Visualization",
+				noodl: "Noodl",
+				ux: "UX-design",
+				conceptDesign: "Concept design",
+				userReaserch: "User research",
+				prototyping: "Prototyping"
+			},
+			leadership: {
+				techPM: "Technical project manager",
+				scrumMaster: "Scrum master",
+				agile: "Agile development",
+				facilitate: "Facilitate",
+				frontendLead: "Front-end lead",
+				uxLead: "UX lead",
+				requirementAnalysis: "Requirement analysis"
+			}
+		};
+
+		let dev = this.tags.development;
+		let d = this.tags.design;
+		let lead = this.tags.leadership;
+
+		this.projects = [
+			{
+				title: 'Siemens',
+				role: 'UX-designer',
+				date: 'april 2018 - ongoing',
+				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sass, dev.typescript, dev.tfs]
+			},
+			{
+				title: 'Finderoo',
+				role: 'Interaction designer and front-end app and web developer',
+				date: 'january 2017 - mars 2018',
+				tags: [lead.frontendLead, dev.mobileApp, dev.web, dev.reactNative, dev.react, d.ux, d.prototyping, d.conceptDesign, lead.requirementAnalysis, d.ui, dev.git]
+			},
+			{
+				title: 'DIPS',
+				role: 'Interaction designer and prototype developer',
+				date: 'january 2017 - april 2017',
+				tags: [d.noodl, d.prototyping, d.ui, dev.js, d.adobexd]
+			},
+			{
+				title: 'Swedish correctional service (Kriminalvården)',
+				role: 'Concept and UX-designer',
+				date: 'february 2016 - december 2016',
+				tags: [lead.uxLead, d.ux, d.prototyping, d.invision, d.conceptDesign, d.ui, d.userReaserch, d.workshop, lead.facilitate]
+			},
+			{
+				title: 'East sweden business cluster (Östsvenska handelskammaren)',
+				role: 'Technical project manager and scrum master',
+				date: 'january 2016 - december 2016',
+				tags: [lead.scrumMaster, lead.techPM. dev.web]
+			},
+			{
+				title: 'BillerudKorsnäs',
+				role: 'Interaction designer and front-end developer',
+				date: 'august 2015 - december 2016',
+				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.less, dev.htmlcss]
+			},
+			{
+				title: 'Wide ideas',
+				role: 'Concept and interaction designer',
+				date: 'january 2016 - may 2016',
+				tags: [d.conceptDesign, d.ui, d.abobecs]
+			},
+			{
+				title: 'Åre Destination',
+				role: 'Front end developer',
+				date: 'january 2015 - july 2015',
+				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.less, dev.tfs]
+			},
+			{
+				title: 'SAAB',
+				role: 'Interaction designer and front-end developer',
+				date: 'august 2014 - february 2015',
+				tags: [d.ui, dev.mobileApp, lead.uxLead, d.invision, d.abobecs, dev.typescript, dev.angularJS, dev.htmlcss]
+			},
+			{
+				title: 'Channelsoft',
+				role: 'Front-end developer',
+				date: 'mars 2013 - november 2013',
+				tags: [dev.less, dev.web, dev.htmlcss, d.ui]
+			},
+			{
+				title: 'Schneider electric',
+				role: 'Front-end developer',
+				date: 'august 2012 - january 2013',
+				tags: [dev.js, dev.mobileApp, dev.unity, dev.ar]
+			},
+			{
+				title: 'Kronoberg county',
+				role: 'Front-end developer',
+				date: 'june 2012 - september 2012',
+				tags: [dev.htmlcss, dev.js, dev.web]
+			},
+			{
+				title: 'Scania',
+				role: 'Front-end developer',
+				date: 'mars 2012 - june 2012',
+				tags: [dev.htmlcss, dev.js, dev.web]
+			}
+		];
+
+		_.each(this.projects, (project)=> {
+			if(project.tags.length > 0) {
+				this.buildChartData(project.tags, project.title);
+			}
+		});
+
+		this.setState({
+			chartData: this.designChartData
+		});
+		
 	}
 
 	changeGraph(graphIndex) {
 		if(graphIndex == 0) {
 			this.setState({
 				selectedGraph:0,
-				chartData: this.getDevelopmentData()
+				chartData: this.developmentChartData
 			});
 		}
 		else if(graphIndex == 1) {
 			this.setState({
 				selectedGraph:1,
-				chartData: this.getDesignData()
+				chartData: this.designChartData
 			});
 		}
 		else if(graphIndex == 2) {
 			this.setState({
 				selectedGraph:2,
-				chartData: this.getLeadershipData()
+				chartData: this.leadershipChartData
 			});
 		}
 	}
 
-	getDevelopmentData() {
-		return  [
-			{
-				index:0,
-				label: "React",
-				value: 3
-			},
-			{
-				index:1,
-			  label: "javascript",
-			  value: 3
-			},
-			{
-				index:2,
-			  label: "html/css",
-			  value: 3
-			},
-			{
-				index:3,
-			  label: "Angular",
-			  value: 3
-			},
-			{
-				index:4,
-			  label: "AngularJS",
-			  value: 3
-			},
-			{
-				index:5,
-			  label: "GIT",
-			  value: 3
-			},
-			{
-				index:6,
-			  label: "TFS",
-			  value: 3
-			},
-			{
-				index:7,
-			  label: "d3.js",
-			  value: 3
-			},
-			{
-				index:8,
-			  label: "WebGL",
-			  value: 3
-			},
-			{
-				index:9,
-			  label: "Typescript",
-			  value: 3
-			},
-			{
-				index:10,
-			  label: "React native",
-			  value: 3
-			},
-			{
-				index:11,
-			  label: "less",
-			  value: 3
-			},
-			{
-				index:12,
-			  label: "Unity3D",
-			  value: 3
-			},
-			{
-				index:13,
-				label: "AR",
-				value: 3
-			  },
-			{
-				index:14,
-			  label: "sass",
-			  value: 3
+	buildChartData(tagsArray, title) {
+		let isDev, isLead, isDesign;
+	
+		_.each(tagsArray, (tag)=> {
+			if(!tag) {
+				console.log("The tag doesn't exist in" + title);
+				return
 			}
-		  ];
+			isDev = _.find(_.values(this.tags.development), (devTag) => {return devTag == tag.toString()});
+			isDesign = _.find(_.values(this.tags.design), (designTag) => {return designTag == tag.toString()});
+			isLead = _.find(_.values(this.tags.leadership), (leadTag) => {return leadTag == tag.toString()});
+			
+			if(isDev) {
+				this.addToChartData(this.developmentChartData, tag);
+			}
+			else if(isDesign) {
+				this.addToChartData(this.designChartData, tag);
+			}
+			else if(isLead) {
+				this.addToChartData(this.leadershipChartData, tag);
+			}
+		});
 	}
 
-	getDesignData() {
-		return  [
-			{
-				index:0,
-			  label: "User tests",
-			  value: 3
-			},
-			{
-				index:1,
-			  label: "Workshop",
-			  value: 3
-			},
-			{
-				index:2,
-			  label: "InVision",
-			  value: 3
-			},
-			{
-				index:3,
-			  label: "Interaction design",
-			  value: 3
-			},
-			{
-				index:4,
-			  label: "Adobe XD",
-			  value: 3
-			},
-			{
-				index:5,
-			  label: "Sketch",
-			  value: 3
-			},
-			{
-				index:6,
-			  label: "Visualization",
-			  value: 3
-			},
-			{
-				index:7,
-			  label: "UX-design",
-			  value: 3
-			},
-			{
-				index:8,
-			  label: "Concept design",
-			  value: 3
-			},
-			{
-				index:9,
-			  label: "User research",
-			  value: 3
-			},
-			{
-				index:10,
-				label: "Prototyping",
-				value: 3
-			}
-		  ];
+	addToChartData(chartArray, tag) {
+
+		if(chartArray.length == 0) {
+			chartArray.push({
+				index: chartArray.length,
+				label: tag,
+				value: 1
+			});
+			return;
+		}
+	
+		let foundData = _.find(chartArray, (chartData)=> {return chartData.label == tag});
+	
+		if(foundData) {
+			foundData.value++;
+		}
+		else {
+			chartArray.push({
+				index: chartArray.length,
+				label: tag,
+				value: 1
+			});
+		}
+
 	}
 
-	getLeadershipData() {
-		return  [
-			{
-				index:0,
-				label: "Technical project manager",
-				value: 3
-			},
-			{
-				index:1,
-				label: "Scrum",
-				value: 3
-			},
-			{
-				index:2,
-				label: "Scrum master",
-				value: 3
-			},
-			{
-				index:3,
-				label: "Agile development",
-				value: 3
-			},
-			{
-				index:4,
-				label: "Front-end lead",
-				value: 3
-			},
-			{
-				index:5,
-				label: "UX lead",
-				value: 3
-			}
-		  ];
-	}
+	renderTags(tagsArray, isRight) {
+		let rightStyle = isRight ? styles.right: '';
 
+		return (<div className={styles.tagWrapper + ' ' + rightStyle}>
+			{
+				tagsArray.map((tag)=>{
+					return (
+						<div className={styles.tag}>{tag}</div>
+					)
+				})}
+		</div>);
+		
+	}
 	
 	render() {
 		
@@ -226,60 +260,31 @@ class KnowView extends React.Component {
 					<div onClick={()=>this.changeGraph(1)} className={(this.state.selectedGraph == 1 ? styles.active: '')}>Design</div>
 					<div onClick={()=>this.changeGraph(2)} className={(this.state.selectedGraph == 2 ? styles.active: '')}>Leadership</div>
 				</div>
-				<Pie data={this.state.chartData} />
+				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} />}
 				<Container>
-					<Paragraph>
-						<h3>Siemens <br></br><span>april 2018 - ongoing</span></h3>
-						<p>UX-designer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Finderoo <br></br><span>january 2017 - mars 2018</span></h3>
-						<p>Interaction designer and front-end app and web developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>DIPS <br></br><span>january 2017 - april 2017</span></h3>
-						<p>Interaction designer and prototype developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Swedish correctional service (Kriminalvården) <br></br><span>february 2016 - december 2016</span></h3>
-						<p>Concept and UX-designer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>East sweden business cluster (Östsvenska handelskammaren) <br></br><span>january 2016 - december 2016</span></h3>
-						<p>Technical project manager and scrum master</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>BillerudKorsnäs <br></br><span>august 2015 - december 2016</span></h3>
-						<p>Interaction designer and front-end developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Wide ideas <br></br><span>january 2016 - may 2016</span></h3>
-						<p>Concept and interaction designer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Åre Destination <br></br><span>january 2015 - july 2015</span></h3>
-						<p>Front end developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>SAAB <br></br><span>august 2014 - february 2015</span></h3>
-						<p>Interaction designer and front-end developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Channelsoft <br></br><span>mars 2013 - november 2013</span></h3>
-						<p>Front-end developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Schneider electric <br></br><span>august 2012 - january 2013</span></h3>
-						<p>Front-end developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Kronoberg county <br></br><span>june 2012 - september 2012</span></h3>
-						<p>Front-end developer</p>
-					</Paragraph>
-					<Paragraph>
-						<h3>Scania <br></br><span>mars 2012 - june 2012</span></h3>
-						<p>Front-end developer</p>
-					</Paragraph>
+					{
+						this.projects.map((project, i)=> {
+							let isRight = i%2 != 0;
+							let rightStyle = isRight ? styles.right : '';
+							return (
+								<Paragraph>
+									<h3>{project.title} <br></br><span>{project.date}</span></h3>
+									<p>{project.role}</p>
+									<div className={styles.tagWrapper + ' ' + rightStyle}>
+										{
+											project.tags.map((tag)=>{
+												return (
+													<div className={styles.tag}>{tag}</div>
+												)
+											})}
+									</div>
+								</Paragraph>
+							)
+						})
+					}
+					
+				
+				
 				</Container>
 				
 			</div>
