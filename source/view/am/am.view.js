@@ -17,9 +17,8 @@ class AmView extends React.Component {
 		this.randomizer = 1;
 		let img1 = images(`./tinaCircle2.png`);
 		let img2 = images(`./tinaCircle3.png`);
-		let img3 = images(`./tinaCircle4.png`);
 		
-		this.images = [img1, img2, img3];
+		this.images = [img1, img2];
 
 		this.setRandomizer = this.setRandomizer.bind(this);
 	}
@@ -52,7 +51,7 @@ class AmView extends React.Component {
 					</Paragraph>
 					<Paragraph>
 						<h3>I started working</h3>
-						<p>in the advertising industry as a front-end devoloper in mainly web applications, with business to business compaign sites and apps. After that I became an IT consultant and started working on a lot more business critical systems and realized the power and importans of great UX and all its processes and tools.</p>
+						<p>in the advertising industry as a front-end devoloper with business to business compaign sites and apps. After that I became an IT consultant and started working on a lot more business critical systems and realized the power and importans of great UX and all its processes and tools.</p>
 					</Paragraph>
 					<Paragraph>
 						<h3>I now work</h3>

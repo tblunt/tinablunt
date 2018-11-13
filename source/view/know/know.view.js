@@ -102,25 +102,25 @@ class KnowView extends React.Component {
 				title: 'East sweden business cluster (Östsvenska handelskammaren)',
 				role: 'Technical project manager and scrum master',
 				date: 'january 2016 - december 2016',
-				tags: [lead.scrumMaster, lead.techPM. dev.web]
+				tags: [lead.scrumMaster, lead.techPM, dev.web]
 			},
 			{
 				title: 'BillerudKorsnäs',
 				role: 'Interaction designer and front-end developer',
 				date: 'august 2015 - december 2016',
-				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.less, dev.htmlcss]
+				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.less, dev.htmlcss, dev.d3]
 			},
 			{
 				title: 'Wide ideas',
 				role: 'Concept and interaction designer',
 				date: 'january 2016 - may 2016',
-				tags: [d.conceptDesign, d.ui, d.abobecs]
+				tags: [d.conceptDesign, d.ui, d.abobecs, d.visualization]
 			},
 			{
 				title: 'Åre Destination',
 				role: 'Front end developer',
 				date: 'january 2015 - july 2015',
-				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.less, dev.tfs]
+				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.less, dev.tfs, dev.d3]
 			},
 			{
 				title: 'SAAB',
@@ -132,25 +132,25 @@ class KnowView extends React.Component {
 				title: 'Channelsoft',
 				role: 'Front-end developer',
 				date: 'mars 2013 - november 2013',
-				tags: [dev.less, dev.web, dev.htmlcss, d.ui]
+				tags: [dev.less, dev.web, dev.htmlcss, d.ui, dev.tfs]
 			},
 			{
 				title: 'Schneider electric',
 				role: 'Front-end developer',
 				date: 'august 2012 - january 2013',
-				tags: [dev.js, dev.mobileApp, dev.unity, dev.ar]
+				tags: [dev.js, dev.mobileApp, dev.unity, dev.ar, dev.tfs]
 			},
 			{
 				title: 'Kronoberg county',
 				role: 'Front-end developer',
 				date: 'june 2012 - september 2012',
-				tags: [dev.htmlcss, dev.js, dev.web]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.tfs]
 			},
 			{
 				title: 'Scania',
 				role: 'Front-end developer',
 				date: 'mars 2012 - june 2012',
-				tags: [dev.htmlcss, dev.js, dev.web]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.tfs]
 			}
 		];
 
@@ -262,6 +262,8 @@ class KnowView extends React.Component {
 				</div>
 				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} />}
 				<Container>
+					<h2>Projects</h2>
+					<div></div>
 					{
 						this.projects.map((project, i)=> {
 							let isRight = i%2 != 0;
@@ -282,9 +284,23 @@ class KnowView extends React.Component {
 							)
 						})
 					}
-					
-				
-				
+					<h2 className={styles.paddingtop}>Employments</h2>
+					<Paragraph>
+						<h3>Usify <br></br><span>january 2017 - ongoing</span></h3>
+						<p>UX-designer and front-end developer</p>
+					</Paragraph>
+					<Paragraph>
+						<h3>Gaia <br></br><span>mars 2013 - december 2016</span></h3>
+						<p>UX-designer and front-end developer</p>
+					</Paragraph>
+					<Paragraph>
+						<h3>Leon <br></br><span>mars 2012 - mars 2013</span></h3>
+						<p>Front-end developer</p>
+					</Paragraph>
+					<Paragraph>
+						<h3>Twingly <br></br><span>august 2011 - mars 2012</span></h3>
+						<p>Tech support</p>
+					</Paragraph>
 				</Container>
 				
 			</div>
