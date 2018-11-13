@@ -20,12 +20,21 @@ class KnowView extends React.Component {
 		
 		this.state = {
 			selectedGraph: 0,
-			chartData: this.developmentChartData
+			chartData: []
 		}
 
+		this.changeGraph = this.changeGraph.bind(this);
+
+	}
+
+	componentWillMount() {
+		this.initData();
+	}
+
+	initData() {
 		this.tags = {
 			development: {
-				react: 'React',
+				react: 'ReactJS',
 				js: 'Javascript',
 				htmlcss: 'html/css',
 				angular: 'Angular',
@@ -154,35 +163,37 @@ class KnowView extends React.Component {
 			}
 		];
 
-		_.each(this.projects, (project)=> {
+		_.each(this.projects, (project, i)=> {
 			if(project.tags.length > 0) {
 				this.buildChartData(project.tags, project.title);
 			}
+
+			if(i == this.projects.length-1) {
+				this.changeGraph(0);
+			}
 		});
 
-		this.setState({
-			chartData: this.designChartData
-		});
 		
 	}
 
 	changeGraph(graphIndex) {
+		
 		if(graphIndex == 0) {
 			this.setState({
 				selectedGraph:0,
-				chartData: this.developmentChartData
+				chartData: _.shuffle(this.developmentChartData)
 			});
 		}
 		else if(graphIndex == 1) {
 			this.setState({
 				selectedGraph:1,
-				chartData: this.designChartData
+				chartData: _.shuffle(this.designChartData)
 			});
 		}
 		else if(graphIndex == 2) {
 			this.setState({
 				selectedGraph:2,
-				chartData: this.leadershipChartData
+				chartData: _.shuffle(this.leadershipChartData)
 			});
 		}
 	}
@@ -201,12 +212,15 @@ class KnowView extends React.Component {
 			
 			if(isDev) {
 				this.addToChartData(this.developmentChartData, tag);
+				this.developmentChartData = _.shuffle(this.developmentChartData);
 			}
 			else if(isDesign) {
 				this.addToChartData(this.designChartData, tag);
+				this.designChartData = _.shuffle(this.designChartData);
 			}
 			else if(isLead) {
 				this.addToChartData(this.leadershipChartData, tag);
+				this.leadershipChartData = _.shuffle(this.leadershipChartData);
 			}
 		});
 	}
@@ -252,7 +266,7 @@ class KnowView extends React.Component {
 	}
 	
 	render() {
-		
+
 		return (
 			<div className={styles.knowView}>
 				<div className={styles.buttonGroup}>
