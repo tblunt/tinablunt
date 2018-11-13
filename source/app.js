@@ -86,11 +86,12 @@ const App = observer(class App_ extends React.Component {
 		let isAnyActive = backgroundImageController.highlightedItem.selected != null;
 		let visible = isAnyActive ? styles.visible : '';
 		let topBorder = this.state.isScrollOnTop ? ' ': styles.topBorder;
+		let fadeVisible = this.state.isScrollOnTop ? ' ' : styles.visible;
 
 		return (
 			<div className={styles.app}>
 				<Navigation></Navigation>
-				{!this.state.isScrollOnTop && <div className={styles.topFader}></div>}
+				<div className={styles.topFader + ' ' + fadeVisible}></div>
 				<div ref={this.setScrollableContentEvents} className={styles.routerWrapper + ' ' + visible + ' ' + topBorder}>
 					{backgroundImageController.highlightedItem.selected && this.renderView()}
 				</div>
