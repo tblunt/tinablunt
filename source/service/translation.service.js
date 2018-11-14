@@ -89,6 +89,7 @@ class Translate {
                 "kan",
                 "do": 
                 "gör",
+
                 "På svenska?": 
                 "In english?",
                 "I am": 
@@ -114,7 +115,28 @@ class Translate {
                 "I grew up":
                 "Jag växte upp",
                 "in a basketball family and ended up dedicating 12 years and a LOT of time to the game (until I injured my knee for the last time). I think my basketball career built the ground I stand on today. Mostly because it went to hell. Nothing went as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. ":
-                "i en basketfamilj och ägnade 12 år och MYCKET tid åt min älskade sport. Jag tror att basketkarriären står för väldig mycket att den jag är idag, mestadels för att det gick åt helvete. Mitt eget sinne och lagets dynamik kom väldigt ofta ivägen för vinst, vilket lärde mig extremt mycket."
+                "i en basketfamilj och ägnade 12 år och MYCKET tid åt min älskade sport. Jag tror att basketkarriären står för väldig mycket att den jag är idag, mestadels för att det gick åt helvete. Mitt eget sinne och lagets dynamik kom väldigt ofta ivägen för vinst, vilket lärde mig extremt mycket.",
+                "Projects":
+                "Projekt",
+
+                "Development":
+                "Utveckling",
+                "Leadership":
+                "Ledarskap",
+
+                "1. People have problems.":
+                "1. Folk har problem.",
+                "2. People are willing to pay money to eliminate their problems.":
+                "2. Folk är villiga att betala pengar för att få sina problem lösta.",
+                "3. Other people can therefore make money on solving people's problems.":
+                "3. Andra folk kan därför tjäna pengar på att lösa folks problem.",
+                "Not really rocket science! This only explains the foundation to very many business opportunities.":
+                "Inte raketforskning direkt! Ovan ser du bara grunden till väldigt många affärsmöjligheter.",
+                "On the other hand, what really is rocket science is how this super simple pattern gets forgotten and lost, especially in the tech industry. By some weird coincidence, people tend to forget their payed mission of solving someone else’s problem, and the focus is put on technics, solution and market strategy. It’s not the craziest focus, but entirely irrelevant if you don’t have control over the foundation of your business case: people and their problems.":
+                "Vad som däremot är raketforskning är hur den här superenkla grunden ofta glöms bort, speciellt inom IT-världen. Man har en tendens att glömma folk och glömma problemen. Istället är det teknik, lösning och verksamhet man pratar om för jämnan. Det är inte helt galet fokus, men totalt irrelevant om man inte har koll på grunden till affärsmöjligheten: folket och deras problem. ",
+                "I am really passionate about solving problems. The passion mostly lies in that I like to do successful things. It gives me a lot more pleasure than doing the unsuccessful ones. As a developer I quickly realized how much more than sharp code skills that is required for a team or an organization to produce relevant problem solving solutions. The thing that separates the failed projects from the successful ones always always always lies in the use and the users. I have seen and done to many “solutions” that end up with no one using it. That's not problem solving. That's wasting time.":
+                'Jag brinner för att lösa problemen. Egentligen för att jag i grund och botten gillar att göra framgångsrika grejer. Det är mycket roligare än alla de andra grejerna. Vad man som utvecklare snabbt inser är att det krävs mycket mer av ett team än grymma kodskills för att få vara med i en lyckad produkts historia. Det som särskiljer ett lyckat projekt från de misslyckade handlar alltid alltid alltid om användningen och användarna. Jag har sett och varit involverad i allt för många ”lösningar” som slutar med att ingen använder dem. Det är INTE problemlösning. Det är bortkastad tid!'
+
             }
         }
 

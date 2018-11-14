@@ -4,6 +4,8 @@ import * as _ from "underscore";
 import Container from '../../component/container/container.component';
 import Paragraph from '../../component/paragraph/paragraph.component';
 
+import T from '../../service/translation.service';
+
 import Pie from './component/pie.component';
 
 import styles from './know.view.less';
@@ -270,13 +272,13 @@ class KnowView extends React.Component {
 		return (
 			<div className={styles.knowView}>
 				<div className={styles.buttonGroup}>
-					<div onClick={()=>this.changeGraph(0)} className={(this.state.selectedGraph == 0 ? styles.active: '')}>Development</div>
-					<div onClick={()=>this.changeGraph(1)} className={(this.state.selectedGraph == 1 ? styles.active: '')}>Design</div>
-					<div onClick={()=>this.changeGraph(2)} className={(this.state.selectedGraph == 2 ? styles.active: '')}>Leadership</div>
+					<div onClick={()=>this.changeGraph(0)} className={(this.state.selectedGraph == 0 ? styles.active: '')}>{T.t("Development")}</div>
+					<div onClick={()=>this.changeGraph(1)} className={(this.state.selectedGraph == 1 ? styles.active: '')}>{T.t("Design")}</div>
+					<div onClick={()=>this.changeGraph(2)} className={(this.state.selectedGraph == 2 ? styles.active: '')}>{T.t("Leadership")}</div>
 				</div>
 				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} />}
 				<Container>
-					<h2>Projects</h2>
+					<h2>{T.t("Projects")}</h2>
 					<div></div>
 					{
 						this.projects.map((project, i)=> {

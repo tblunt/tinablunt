@@ -3,6 +3,8 @@ var images = require.context('../../../asset/image', true);
 
 import Container from '../../component/container/container.component';
 import Paragraph from '../../component/paragraph/paragraph.component';
+import LanguageChanger from '../../component/languageChanger/languageChanger.component';
+
 import T from '../../service/translation.service';
 
 import styles from './am.view.less';
@@ -12,12 +14,8 @@ class AmView extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.localeImageSwedish = images(`./swedish.png`);
-		this.localeImageEnglish = images(`./english.png`);
-		
 		this.state = {
 			imgPath: null,
-			localeImage: T.getLocale() == 'en' ? this.localeImageSwedish: this.localeImageEnglish
 		};
 
 		this.randomizer = 1;
@@ -27,7 +25,6 @@ class AmView extends React.Component {
 		this.images = [img1, img2];
 
 		this.setRandomizer = this.setRandomizer.bind(this);
-		this.changeLanguage = this.changeLanguage.bind(this);
 	}
 
 	setRandomizer() {
@@ -38,20 +35,6 @@ class AmView extends React.Component {
 		});
 	}
 
-	changeLanguage() {
-		if(T.getLocale() == 'en') {
-			T.setLocale('sv');
-			this.setState({
-				localeImage: this.localeImageEnglish
-			});
-		}
-		else {
-			T.setLocale('en');
-			this.setState({
-				localeImage: this.localeImageSwedish
-			});
-		}
-	}
 	
 	render() {
 		
@@ -64,10 +47,7 @@ class AmView extends React.Component {
 					</div>
 					<div className={styles.centered}>
 						<a href="mailto:tinablunt@gmail.com">tinablunt@gmail.com</a>
-						<a onClick={()=>this.changeLanguage()} className={styles.language}>
-							<img src={this.state.localeImage} />	
-							<p>{T.t('På svenska?')}</p>
-						</a>
+						<LanguageChanger></LanguageChanger>
 					</div>
 					<Paragraph>
 						<h3>{T.t('I am')}</h3>
