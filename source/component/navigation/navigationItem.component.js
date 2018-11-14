@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { observer } from "mobx-react";
 
-import Container from '../container/container.component';
 import backgroundImageController from '../backgroundImageViewer/backgrundImage.controller';
+import T from '../../service/translation.service';
 
 import styles from './navigationItem.component.less';
 
-class NavigationItem extends React.Component {
+const NavigationItem = observer(class NavigationItem extends React.Component {
 
     setColor() {
         switch(this.props.navItem.color){
@@ -29,6 +29,7 @@ class NavigationItem extends React.Component {
     }
   
     render() {
+        let locale = T.locale.code;
         let colorStyle = this.setColor();
         let selectedStyle = (backgroundImageController.highlightedItem.selected && backgroundImageController.highlightedItem.selected.title == this.props.navItem.title) ? styles.active: '';
 
@@ -41,7 +42,7 @@ class NavigationItem extends React.Component {
                 onClick={()=>this.handleClick()}
                 onMouseEnter={()=>backgroundImageController.setHovered(this.props.navItem)} 
                 onMouseLeave={()=>backgroundImageController.setHovered(null)} >
-                <h3 className={styles.title}>{this.props.navItem.title}</h3>
+                <h3 className={styles.title}>{T.t(this.props.navItem.title)}</h3>
                 <div className={styles.lineWrapper}>
                     <div className={styles.menuItemCircle}></div>
                     <div className={styles.menuItemHoverCircle}></div>
@@ -50,7 +51,7 @@ class NavigationItem extends React.Component {
             </div>
 		);
 	}
-}
+})
 
     
 export default NavigationItem;
