@@ -97,7 +97,7 @@ class Translate {
                 "an outgoing and driven lady in my thirties. I am born and raised in Stockholm, but my current home is in Norrköping (and has been for more than ten years now).": 
                 "en social och driven dam i trettioårsåldern. Jag är född och uppväxt i Stockholm men har sedan mer än 10 år tillbaka bott i Norrköping.",
                 "I studied": 
-                "Jag pluggade",
+                "Jag är utbildad",
                 "master of science in media technology where my main focus was software development, design and information visualization.": 
                 "civilingenjör i medieteknik, där jag inriktade mig mot mjukvaru-utveckling, design och informationsvisualisering.",
                 "I started working": 
@@ -115,7 +115,7 @@ class Translate {
                 "I grew up":
                 "Jag växte upp",
                 "in a basketball family and ended up dedicating 12 years and a LOT of time to the game (until I injured my knee for the last time). I think my basketball career built the ground I stand on today. Mostly because it went to hell. Nothing went as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. ":
-                "i en basketfamilj och ägnade 12 år och MYCKET tid åt min älskade sport. Jag tror att basketkarriären står för väldig mycket att den jag är idag, mestadels för att det gick åt helvete. Mitt eget sinne och lagets dynamik kom väldigt ofta ivägen för vinst, vilket lärde mig extremt mycket.",
+                "i en basketfamilj och ägnade 12 år och MYCKET tid åt min älskade sport. Jag tror att basketkarriären står för väldigt mycket av den jag är idag, mestadels för att det gick åt helvete. Mitt eget sinne och lagets dynamik kom väldigt ofta i vägen för vinst, vilket lärde mig extremt mycket.",
                 "Projects":
                 "Projekt",
 

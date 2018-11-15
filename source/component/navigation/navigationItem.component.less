@@ -1,7 +1,7 @@
 @import '../../config/variables';
 @import '../../config/mixins';
 
-@circleSize: 1rem;
+@circleSize: 0.75rem;
 
 .colorize(@color) {
     .title {
@@ -41,6 +41,7 @@
             border: 0.1rem solid @text_color;
             height: @circleSize;
             width: @circleSize;
+            .transform(scale(0.75));
             position: absolute;
             left:50%;
             margin-left: -@circleSize*0.5;

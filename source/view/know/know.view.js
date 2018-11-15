@@ -43,16 +43,15 @@ class KnowView extends React.Component {
 				angularJS: "AngularJS",
 				typescript: "Typescript",
 				reactNative: "React native",
-				git: "GIT",
-				tfs: "TFS",
+				git: "GIT/TFS",
 				d3: "d3.js",
 				webgl: "WebGL",
 				less: "less",
 				unity: "Unity3D",
-				ar: "AR",
 				sass: "sass",
-				mobileApp: "App development",
-				web: "Web development"
+				mobileApp: "App developing",
+				web: "Web developing",
+				mobx: "mobx/rxjs"
 			},
 			design: {
 				userTest: "User tests",
@@ -89,13 +88,13 @@ class KnowView extends React.Component {
 				title: 'Siemens',
 				role: 'UX-designer',
 				date: 'april 2018 - ongoing',
-				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sass, dev.typescript, dev.tfs]
+				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sass, dev.typescript, dev.git, dev.mobx]
 			},
 			{
 				title: 'Finderoo',
 				role: 'Interaction designer and front-end app and web developer',
 				date: 'january 2017 - mars 2018',
-				tags: [lead.frontendLead, dev.mobileApp, dev.web, dev.reactNative, dev.react, d.ux, d.prototyping, d.conceptDesign, lead.requirementAnalysis, d.ui, dev.git]
+				tags: [lead.frontendLead, dev.mobileApp, dev.web, dev.reactNative, dev.react, d.ux, d.prototyping, d.conceptDesign, lead.requirementAnalysis, d.ui, dev.git, dev.mobx]
 			},
 			{
 				title: 'DIPS',
@@ -119,7 +118,7 @@ class KnowView extends React.Component {
 				title: 'BillerudKorsnäs',
 				role: 'Interaction designer and front-end developer',
 				date: 'august 2015 - december 2016',
-				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.less, dev.htmlcss, dev.d3]
+				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.less, dev.htmlcss, dev.d3, dev.mobx]
 			},
 			{
 				title: 'Wide ideas',
@@ -131,7 +130,7 @@ class KnowView extends React.Component {
 				title: 'Åre Destination',
 				role: 'Front end developer',
 				date: 'january 2015 - july 2015',
-				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.less, dev.tfs, dev.d3]
+				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.less, dev.git, dev.d3]
 			},
 			{
 				title: 'SAAB',
@@ -143,25 +142,25 @@ class KnowView extends React.Component {
 				title: 'Channelsoft',
 				role: 'Front-end developer',
 				date: 'mars 2013 - november 2013',
-				tags: [dev.less, dev.web, dev.htmlcss, d.ui, dev.tfs]
+				tags: [dev.less, dev.web, dev.htmlcss, d.ui, dev.git]
 			},
 			{
 				title: 'Schneider electric',
 				role: 'Front-end developer',
 				date: 'august 2012 - january 2013',
-				tags: [dev.js, dev.mobileApp, dev.unity, dev.ar, dev.tfs]
+				tags: [dev.js, dev.mobileApp, dev.unity, dev.git]
 			},
 			{
 				title: 'Kronoberg county',
 				role: 'Front-end developer',
 				date: 'june 2012 - september 2012',
-				tags: [dev.htmlcss, dev.js, dev.web, dev.tfs]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
 			},
 			{
 				title: 'Scania',
 				role: 'Front-end developer',
 				date: 'mars 2012 - june 2012',
-				tags: [dev.htmlcss, dev.js, dev.web, dev.tfs]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
 			}
 		];
 
