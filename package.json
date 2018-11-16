@@ -51,6 +51,6 @@
     "react-stripe-elements": "^1.5.0",
     "underscore": "^1.9.1",
     "url-loader": "^0.6.2",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.4"
   }
 }

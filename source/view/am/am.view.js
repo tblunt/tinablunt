@@ -7,7 +7,10 @@ import LanguageChanger from '../../component/languageChanger/languageChanger.com
 
 import T from '../../service/translation.service';
 
+import Social from './component/social.component';
+
 import styles from './am.view.less';
+
 
 
 class AmView extends React.Component {
@@ -25,6 +28,7 @@ class AmView extends React.Component {
 		this.images = [img1, img2];
 
 		this.setRandomizer = this.setRandomizer.bind(this);
+
 	}
 
 	setRandomizer() {
@@ -73,9 +77,10 @@ class AmView extends React.Component {
 						<h3>{T.t("I grew up")}</h3>
 						<p>{T.t("in a basketball family and ended up dedicating 12 years and a LOT of time to the game (until I injured my knee for the last time). I think my basketball career built the ground I stand on today. Mostly because it went to hell. Nothing went as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. ")}</p>
 					</Paragraph>
-					
+				
 				</Container>
 				
+				<Social></Social>
 			</div>
 		);
 	}
