@@ -29,6 +29,12 @@ class Social extends React.Component {
 		});
 	}
 
+	formatDate(dateSek) {
+		let date = new Date(dateSek*1000);
+		let months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
+		return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+	}
+
 	
 	render() {
 		
@@ -40,6 +46,13 @@ class Social extends React.Component {
                         return (
                             <div className={styles.imageWrapper}>
                                 <img src={img.images.standard_resolution.url} />
+								<div className={styles.caption}>
+								<p className={styles.date}>{this.formatDate(img.created_time)}</p>
+								{
+									img.caption && <p>{img.caption.text}</p>
+								}
+								</div>
+								
                             </div>
                         );
                     })}
