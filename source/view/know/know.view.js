@@ -301,7 +301,11 @@ class KnowView extends React.Component {
 					}
 					<h2 className={styles.paddingtop}>Employments</h2>
 					<Paragraph>
-						<h3>Usify <br></br><span>january 2017 - ongoing</span></h3>
+						<h3>Gaia <br></br><span>january 2019 - ongoing</span></h3>
+						<p>UX-lead</p>
+					</Paragraph>
+					<Paragraph>
+						<h3>Usify <br></br><span>january 2017 - december 2018</span></h3>
 						<p>UX-designer and front-end developer</p>
 					</Paragraph>
 					<Paragraph>

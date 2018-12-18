@@ -57,43 +57,30 @@ class DoView extends React.Component {
 						<h3>{T.t('But how?')}</h3>
 						<p>{T.t('I believe the success process is divided into three stages: problem definition, design and implementation. Together they build up the application layer by layer to strengthen it from the core.')}</p>
 					</Paragraph>
-
-					<Paragraph>
-						<h3>{T.t('The problem stage')}</h3>
-						<p>{T.t('Understanding the current situation and the problems the user face is the foundation of solving it. To be able to keep an open mind in collecting information about the problem (and not trying to solve it), the better adapted the solution will be. ')}</p>
+					
+					<div className={styles.designImages}>
+						<div className={styles.designStep}>
+							<img className={styles.designImage} src={images(`./design1.png`)} />
+							<div className={styles.label}>Problem information</div>
+						</div>
+						<div className={styles.designStep}>
+							<img className={styles.designImage} src={images(`./design2.png`)} />
+							<div className={styles.label}>Analyze and find patterns</div>
+						</div>
+						<div className={styles.designStep}>
+							<img className={styles.designImage} src={images(`./design3.png`)} />
+							<div className={styles.label}>Brainstorm solutions</div>
+						</div>
+						<div className={styles.designStep}>
+							<img className={styles.designImage} src={images(`./design4.png`)} />
+							<div className={styles.label}>One concrete solution</div>
+						</div>
+						<div className={styles.designStep}>
+							<img className={styles.designImage} src={images(`./design5.png`)} />
+							<div className={styles.label}>Implement</div>
+						</div>
 						
-						<p className={styles.subTitle}>{T.t('Understanding the problem')}</p>
-						<p>{T.t('Interview, observe and learn from the people who are right in the heart of the problem. Find their pain points and the situations they feel frustrated and lost. ')}</p>
-
-						<p className={styles.subTitle}>{T.t('Analyze and find patterns')}</p>
-						<p>{T.t('Filter out key quotes and try to find themes and patterns in the gathered problem information bulk. Create visualizations, discuss and vote for which is the main problem that will give the most gain versus effort.  ')}</p>
-					</Paragraph>
-
-					<Paragraph>
-						<h3>{T.t('The design stage')}</h3>
-						<p>{T.t('The goal is to reach a solution concept to the main problem. Keep the user in focus but take other factors into account: business strategy, technical and financial limitations. If the concept design is impossible to implement it’s not a possible solution.')}</p>
-						
-						<p className={styles.subTitle}>{T.t('Concept design')}</p>
-						<p>{T.t('Allow the collective creativity to go bananas. Brainstorm, fokus in private, work in groups, do something completely different, have focused and unfocused discussions, use your hands, your body, Boost each other’s crazy ideas and spin off on them. Do everything to squeeze out all possible ideas and end up with one.')}</p>
-
-						<p className={styles.subTitle}>{T.t('One concrete solution')}</p>
-						<p>{T.t('Sketch, design, create prototypes, user test and involve the develop team to produce a design specification that the developers use as base for the implementation.')}</p>
-					</Paragraph>
-
-
-					<Paragraph>
-						<h3>{T.t('The implementation stage')}</h3>
-						<p>{T.t('Agile work methodology lays the foundation for design iteration and involves user feedback throughout the implementation stage. If established work and release methology is lacking, the UX-work will be extremely difficult to execute well.')}</p>
-						
-						<p className={styles.subTitle}>{T.t('Code')}</p>
-						<p>{T.t('Code, code, code. Re-evaluate the solutions and adjust the design. Code, code, code. An unpredicted obstacle appears, adjust the design. Code, code, code. Technical limitations appear, adjust the design. Eat, sleep, repeat.')}</p>
-
-						<p className={styles.subTitle}>{T.t('Test')}</p>
-						<p>{T.t('Sit next to your user. Give them tasks or watch them try to solve a real problem. Listen to their thoughts and concerns. Gather user statistics and click heat maps. Everything to ensure the quality of the design.')}</p>
-
-						<p className={styles.subTitle}>{T.t('Improve')}</p>
-						<p>{T.t('Learn from the users and categorize the feedback into critical and non critical alterations or which parts that has to be evaluated from the beginning of the process and be defined from the problem perspective. ')}</p>
-					</Paragraph>
+					</div>
 
 					<div className={styles.layers}>
 						<h2>Application layers</h2>
@@ -118,8 +105,44 @@ class DoView extends React.Component {
 						<div className={styles.layer}>
 							<p>Problem understanding</p>
 						</div>
-
 					</div>
+
+					<Paragraph>
+						<h3>{T.t('The problem stage')}</h3>
+						<p>{T.t('Understanding the current situation and the problems the user face is the foundation of solving them. To be able to keep an open mind in collecting information about the problem (and not trying to solve it right away), the better adapted the solution will be. ')}</p>
+						
+						<p className={styles.subTitle}>{T.t('Understanding the problem')}</p>
+						<p>{T.t('Interview, observe and learn from the people who are right in the heart of the problem. Find their pain points and the situations they feel frustrated and lost. ')}</p>
+
+						<p className={styles.subTitle}>{T.t('Analyze and find patterns')}</p>
+						<p>{T.t('Filter out key quotes and try to find themes and patterns in the gathered problem information bulk. Create visualizations, discuss and vote for which is the main problem that will give the most gain versus effort.  ')}</p>
+					</Paragraph>
+
+					<Paragraph>
+						<h3>{T.t('The design stage')}</h3>
+						<p>{T.t('The goal is to reach a solution concept to the main problem. Keep the user in focus but take other factors into account: business strategy, technical and financial limitations. If the concept design is impossible to implement it’s not a possible solution.')}</p>
+						
+						<p className={styles.subTitle}>{T.t('Concept design')}</p>
+						<p>{T.t('Allow the collective creativity to go bananas. Brainstorm, focus in private, work in groups, do something completely different, have focused and unfocused discussions, use the hands, the body, Boost each other’s crazy ideas and spin off on them. Do everything to squeeze out all possible ideas and end up with one.')}</p>
+
+						<p className={styles.subTitle}>{T.t('One concrete solution')}</p>
+						<p>{T.t('Sketch, design, create prototypes, user test and involve the develop team to produce a design specification that the developers use as base for the implementation.')}</p>
+					</Paragraph>
+
+
+					<Paragraph>
+						<h3>{T.t('The implementation stage')}</h3>
+						<p>{T.t('Agile work methodology lays the foundation for design iteration and involves user feedback throughout the implementation stage. If established work and release methology is lacking, the UX-work will be extremely difficult to execute well.')}</p>
+						
+						<p className={styles.subTitle}>{T.t('Code')}</p>
+						<p>{T.t('Code, code, code. Re-evaluate the solutions and adjust the design. Code, code, code. An unpredicted obstacle appears, adjust the design. Code, code, code. Technical limitations appear, adjust the design. Eat, sleep, repeat.')}</p>
+
+						<p className={styles.subTitle}>{T.t('Test')}</p>
+						<p>{T.t('Sit next to the user. Give them tasks or watch them try to solve a real problem. Listen to their thoughts and concerns. Gather user statistics and click heat maps. Everything to ensure the quality of the design.')}</p>
+
+						<p className={styles.subTitle}>{T.t('Improve')}</p>
+						<p>{T.t('Learn from the users and categorize the feedback into critical and non critical alterations or which parts that has to be evaluated from the beginning of the process and be defined from the problem perspective. ')}</p>
+					</Paragraph>
 				</Container>
 		
 			</div>
