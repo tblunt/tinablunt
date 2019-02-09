@@ -157,11 +157,18 @@ class KnowView extends React.Component {
 				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
 			},
 			{
+				title: 'Moistguard',
+				role: 'Front-end developer',
+				date: 'june 2012 - august 2012',
+				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
+			},
+			{
 				title: 'Scania',
 				role: 'Front-end developer',
 				date: 'mars 2012 - june 2012',
 				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
-			}
+			},
+			
 		];
 
 		_.each(this.projects, (project, i)=> {
