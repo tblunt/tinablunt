@@ -11,11 +11,15 @@ var height = window.innerHeight*0.7;
 var radius = Math.min(width*0.7, height*0.7) / 2;
 height = radius*2.2;
 
-
 class Pie extends React.Component {
+
   constructor(props) {
     super(props);
-    
+
+    this.state = {
+      highlightedItemLabel:null,
+      hoveredItemLabel: null
+    }
   }
 
   componentDidMount() {
@@ -72,17 +76,35 @@ class Pie extends React.Component {
   
     slice.enter()
       .insert("path")
-      .style("fill", (d) => { return color(d.data.label); })
       .attr("class", "slice")
-      .on("mouseover", function handleMouseOver(d, i) { 
-        d3.select(this).style({
-          fill: "#FD625E",
-        });
+      .on("mouseover", (d, i) => { 
+        this.setState({
+          hoveredItemLabel: d.data.label
+        })
       })
-      .on("mouseout", function handleMouseOut(d, i) {
-        d3.select(this).style({
-          fill:  color(d.data.label),
+      .on("mouseout", (d, i) => {
+        this.setState({
+          hoveredItemLabel: null
+        })
+      })
+      .on("click", (d) => {
+        this.setState({
+          highlightedItemLabel: d.data.label
         });
+        this.props.onSliceClick(d.data.label);
+        
+      });
+
+      slice.style("fill", (d)=> {
+        if(d.data.label == this.state.highlightedItemLabel) {
+          return "#FD625E";
+        }  
+        else if(d.data.label == this.state.hoveredItemLabel) {
+          return "rgba(253, 98, 94, 0.7)";
+        }
+        else {
+          return color(d.data.label); 
+        }
       });
 
     slice		
@@ -94,7 +116,8 @@ class Pie extends React.Component {
         return function(t) {
           return arc(interpolate(t));
         };
-      })
+      });
+
   
     slice.exit()
       .remove();
@@ -111,6 +134,36 @@ class Pie extends React.Component {
       .text((d)=> {
         return d.data.label;
       });
+
+      text
+        .style("fill", (d)=> {
+          if(d.data.label == this.state.highlightedItemLabel) {
+            return "#FD625E";
+          }  
+          else if(d.data.label == this.state.hoveredItemLabel) {
+            return "#fff";
+          } 
+          else {
+            return "rgba(255,255,255,0.7)"; 
+          }
+        })
+        .style("font-weight", (d)=> {
+          if(d.data.label == this.state.highlightedItemLabel) {
+            return "bold";
+          }  
+          else {
+            return "normal"; 
+          }
+        })
+        .style("font-size", (d)=> {
+          if(d.data.label == this.state.highlightedItemLabel) {
+            return "14px";
+          } 
+          else {
+            return "10px"; 
+          }
+        });
+
     
     function midAngle(d){
       return d.startAngle + (d.endAngle - d.startAngle)/2;

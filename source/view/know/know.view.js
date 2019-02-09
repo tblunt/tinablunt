@@ -22,7 +22,8 @@ class KnowView extends React.Component {
 		
 		this.state = {
 			selectedGraph: 0,
-			chartData: []
+			chartData: [],
+			selectedTagString: null
 		}
 
 		this.changeGraph = this.changeGraph.bind(this);
@@ -46,9 +47,8 @@ class KnowView extends React.Component {
 				git: "GIT/TFS",
 				d3: "d3.js",
 				webgl: "WebGL",
-				less: "less",
 				unity: "Unity3D",
-				sass: "sass",
+				sassless: "sass/less",
 				mobileApp: "App developing",
 				web: "Web developing",
 				mobx: "mobx/rxjs"
@@ -88,7 +88,7 @@ class KnowView extends React.Component {
 				title: 'Siemens',
 				role: 'UX-designer',
 				date: 'april 2018 - ongoing',
-				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sass, dev.typescript, dev.git, dev.mobx]
+				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sassless, dev.typescript, dev.git, dev.mobx]
 			},
 			{
 				title: 'Finderoo',
@@ -118,7 +118,7 @@ class KnowView extends React.Component {
 				title: 'BillerudKorsnäs',
 				role: 'Interaction designer and front-end developer',
 				date: 'august 2015 - december 2016',
-				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.less, dev.htmlcss, dev.d3, dev.mobx]
+				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.sassless, dev.htmlcss, dev.d3, dev.mobx]
 			},
 			{
 				title: 'Wide ideas',
@@ -130,7 +130,7 @@ class KnowView extends React.Component {
 				title: 'Åre Destination',
 				role: 'Front end developer',
 				date: 'january 2015 - july 2015',
-				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.less, dev.git, dev.d3]
+				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.sassless, dev.git, dev.d3]
 			},
 			{
 				title: 'SAAB',
@@ -142,7 +142,7 @@ class KnowView extends React.Component {
 				title: 'Channelsoft',
 				role: 'Front-end developer',
 				date: 'mars 2013 - november 2013',
-				tags: [dev.less, dev.web, dev.htmlcss, d.ui, dev.git]
+				tags: [dev.sassless, dev.web, dev.htmlcss, d.ui, dev.git]
 			},
 			{
 				title: 'Schneider electric',
@@ -266,6 +266,13 @@ class KnowView extends React.Component {
 		
 	}
 	
+
+	onSliceClicked(str) {
+		this.setState({
+			selectedTagString: str
+		});
+	}
+
 	render() {
 
 		return (
@@ -275,7 +282,7 @@ class KnowView extends React.Component {
 					<div onClick={()=>this.changeGraph(1)} className={(this.state.selectedGraph == 1 ? styles.active: '')}>{T.t("Design")}</div>
 					<div onClick={()=>this.changeGraph(2)} className={(this.state.selectedGraph == 2 ? styles.active: '')}>{T.t("Leadership")}</div>
 				</div>
-				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} />}
+				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} onSliceClick={(str)=>this.onSliceClicked(str)} />}
 				<Container>
 					<h2>{T.t("Projects")}</h2>
 					<div></div>
@@ -290,8 +297,9 @@ class KnowView extends React.Component {
 									<div className={styles.tagWrapper + ' ' + rightStyle}>
 										{
 											project.tags.map((tag)=>{
+												let isHighlightedStyle = tag == this.state.selectedTagString ? styles.highlighted : "";
 												return (
-													<div className={styles.tag}>{tag}</div>
+													<div className={styles.tag+ " " + isHighlightedStyle}>{tag}</div>
 												)
 											})}
 									</div>
