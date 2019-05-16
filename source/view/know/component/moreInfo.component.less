@@ -1,0 +1,43 @@
+@import '../../../config/variables';
+@import '../../../config/mixins';
+
+.moreInfoWrapper {
+    margin-top:10px;
+
+    .toggler {
+        .border-radius(4px);
+        padding: 0.05rem 0.25rem 0.1rem 0.25rem;
+        cursor: pointer;
+        background: @text_color;
+        font-size: 10px;
+        color:@gray_color_darkest;
+        font-weight: bold;
+        
+        &:hover {
+            color: @text_color;
+            background: @gray_color_darker;
+        }
+    }
+
+    .infoText {
+        display: none;
+        margin-bottom: 10px;
+    }
+
+    .warning {
+        opacity: 0.8;
+        color: @red_color;
+        font-style: italic;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+
+
+.moreInfoWrapper.isOpen {
+    .infoText {
+        display: block;
+    }
+
+   
+}

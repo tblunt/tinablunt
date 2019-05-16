@@ -124,6 +124,9 @@ class Translate {
                 "Leadership":
                 "Ledarskap",
 
+                "The desciption in english is coming soon :)":
+                '',
+
                 "1. People have problems.":
                 "1. Folk har problem.",
                 "2. People are willing to pay money to eliminate their problems.":

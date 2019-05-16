@@ -7,6 +7,7 @@ import Paragraph from '../../component/paragraph/paragraph.component';
 import T from '../../service/translation.service';
 
 import Pie from './component/pie.component';
+import MoreInfo from './component/moreInfo.component';
 
 import styles from './know.view.less';
 
@@ -51,7 +52,8 @@ class KnowView extends React.Component {
 				sassless: "sass/less",
 				mobileApp: "App developing",
 				web: "Web developing",
-				mobx: "mobx/rxjs"
+				mobx: "mobx/rxjs",
+				redux: "Redux"
 			},
 			design: {
 				userTest: "User tests",
@@ -85,88 +87,129 @@ class KnowView extends React.Component {
 
 		this.projects = [
 			{
+				title: 'Tekniska verken',
+				role: 'UX-designer and front-end developer',
+				date: 'april 2019 - ongoing',
+				tags: [dev.react, dev.redux, dev.mobx, dev.web, d.ui, lead.uxLead]
+			},
+			{
+				title: 'Rejmes',
+				role: 'UX-designer',
+				date: 'january 2019 - april 2019',
+				tags: [d.ux, d.adobexd, d.ui, d.invision],
+				descriptionTexts: ["Jag var UX-designer i utvecklingen av ett webbaserat arbetsverktyg för att Rejmes internt ska hantera och effektivisera inbytesprocessen för en bil."]
+			},
+			{
+				title: 'Sectra',
+				role: 'UX-designer',
+				date: 'january 2019 - ongoing',
+				tags: [d.ux, d.sketch, d.ui, dev.web, dev.js, dev.htmlcss, dev.sassless, dev.git],
+				descriptionTexts: ["Jag var UX-designer i utvecklingen av det webbaserade nätverket av Sectras externa företagssidor. Jag var även involverad i webbutvecklingen av multisitelösningen. "]
+			},
+			{
 				title: 'Siemens',
 				role: 'UX-designer',
-				date: 'april 2018 - ongoing',
-				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sassless, dev.typescript, dev.git, dev.mobx]
+				date: 'april 2018 - april 2019',
+				tags: [d.ux, lead.requirementAnalysis, d.userTest, d.userReaserch, d.sketch, d.prototyping, d.conceptDesign, d.ui, dev.web, dev.angular, dev.htmlcss, dev.sassless, dev.typescript, dev.git, dev.mobx],
+				descriptionTexts: ["Jag ledde UX-teamet på digitaliseringsavdelningen för service av Siemens turbiner. Totalt handlade det om ansvar över användarupplevelsen för fyra webbaserade applikationer samt att ingå i vardera utvecklingsteam för dem. "]
 			},
 			{
 				title: 'Finderoo',
 				role: 'Interaction designer and front-end app and web developer',
 				date: 'january 2017 - mars 2018',
-				tags: [lead.frontendLead, dev.mobileApp, dev.web, dev.reactNative, dev.react, d.ux, d.prototyping, d.conceptDesign, lead.requirementAnalysis, d.ui, dev.git, dev.mobx]
+				tags: [lead.frontendLead, dev.mobileApp, dev.web, dev.reactNative, dev.react, d.ux, d.prototyping, d.conceptDesign, lead.requirementAnalysis, d.ui, dev.git, dev.mobx],
+				descriptionTexts: ["Arbetet med den nya tjänsten Finderoo började i att jag lade grund för UX-och konceptdesign för den helt nya produkten. Jag fortsatte som ansvarig utvecklare för front-end-klienterna som bestod av både en webbaserad e-handel men även en ios-och en androidapp."]
 			},
 			{
 				title: 'DIPS',
 				role: 'Interaction designer and prototype developer',
 				date: 'january 2017 - april 2017',
-				tags: [d.noodl, d.prototyping, d.ui, dev.js, d.adobexd]
+				tags: [d.noodl, d.prototyping, d.ui, dev.js, d.adobexd],
+				descriptionTexts: ["Jag ingick i teamet som hade i uppdrag att utveckla mobila gränssnitt mot DIPS journalsystem. Arbetet bestod i att ta fram högupplösta prototyper av appar förattbland annat hjälpa sjukhusbesökare, underlätta läkares patienthanteringoch förbättra dokumentation av tvångsvård inom psykiatrin.  "] 
 			},
 			{
 				title: 'Swedish correctional service (Kriminalvården)',
 				role: 'Concept and UX-designer',
 				date: 'february 2016 - december 2016',
-				tags: [lead.uxLead, d.ux, d.prototyping, d.invision, d.conceptDesign, d.ui, d.userReaserch, d.workshop, lead.facilitate]
+				tags: [lead.uxLead, d.ux, d.prototyping, d.invision, d.conceptDesign, d.ui, d.userReaserch, d.workshop, lead.facilitate],
+				descriptionTexts: ["Jag arbetade med att, genom användarstudier och behovskartläggning, ta fram konceptdesign och en prototyp på en app för att hjälpa personer inom frivården att inte återfalla i brått. "]
 			},
 			{
 				title: 'East sweden business cluster (Östsvenska handelskammaren)',
 				role: 'Technical project manager and scrum master',
 				date: 'january 2016 - december 2016',
-				tags: [lead.scrumMaster, lead.techPM, dev.web]
+				tags: [lead.scrumMaster, lead.techPM, dev.web],
+				descriptionTexts: ["Handelskammaren ville ha en levande plats på webben vars syfte var att locka nya medlemmar samt vara en mötesplats för befintliga. Jag hade ansvar för kartläggning av behov, övergripande designen och drev sedan utvecklingen av den."]
 			},
 			{
 				title: 'BillerudKorsnäs',
 				role: 'Interaction designer and front-end developer',
 				date: 'august 2015 - december 2016',
-				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.sassless, dev.htmlcss, dev.d3, dev.mobx]
+				tags: [lead.uxLead, d.ui, d.abobecs, d.userTest, dev.web, dev.angular, dev.angularJS, dev.sassless, dev.htmlcss, dev.d3, dev.mobx],
+				descriptionTexts: ["Jag var ansvarig UX-designer för webbaserade kundportaler kopplade till BillerudKorsnäs två största affärsområden med syfte att digitalisera orderläggningsprocessen av papper. Jag deltog även till stor del i front-end-utvecklingen. "]
 			},
 			{
 				title: 'Wide ideas',
 				role: 'Concept and interaction designer',
 				date: 'january 2016 - may 2016',
-				tags: [d.conceptDesign, d.ui, d.abobecs, d.visualization]
+				tags: [d.conceptDesign, d.ui, d.abobecs, d.visualization],
+				descriptionTexts: ["Jag utvecklade ett koncept för hur Wide ideas idébank skulle kunna utnyttjas i större format. Tanken var att bygga ett beslutsstöd för stora skärmar som ska ersätta den traditionella white boarden med ett digitalt alternativ. "]
 			},
 			{
 				title: 'Åre Destination',
 				role: 'Front end developer',
 				date: 'january 2015 - july 2015',
-				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.sassless, dev.git, dev.d3]
+				tags: [dev.typescript, dev.mobileApp, dev.web, dev.angularJS, dev.htmlcss, dev.sassless, dev.git, dev.d3],
+				descriptionTexts: ["Projektet bestod av att bygga en webbaserad 3D-karta över leder och pister på och kring Åreskutan med omnejd."]
 			},
 			{
 				title: 'SAAB',
 				role: 'Interaction designer and front-end developer',
 				date: 'august 2014 - february 2015',
-				tags: [d.ui, dev.mobileApp, lead.uxLead, d.invision, d.abobecs, dev.typescript, dev.angularJS, dev.htmlcss]
+				tags: [d.ui, dev.mobileApp, lead.uxLead, d.invision, d.abobecs, dev.typescript, dev.angularJS, dev.htmlcss],
+				descriptionTexts: ["Jag var ansvarig UX-designer och utvecklare för en mobil klient till SAABs säkerhetssystem som administrerar och kommunicerar med vakter, sjukvårdspersonal och funktionärer under bland annat skid-VM i Falun. Lösningen bestod av en webbapp där personalen kunde rapportera fel, få uppdrag och inräkna åskådare på området."]
+			},
+			{
+				title: 'Gaia Places',
+				role: 'Front-end developer',
+				date: 'august 2013 - december 2016',
+				tags: [dev.angularJS, d.invision, d.abobecs,, d.ui, dev.htmlcss],
+				descriptionTexts: ["Jag deltog i design och utveckling av tjänster kopplade till att digitalisera fysiska platser, däribland skyltsystem för fastigheter och hänvisningssystem."]
 			},
 			{
 				title: 'Channelsoft',
 				role: 'Front-end developer',
 				date: 'mars 2013 - november 2013',
-				tags: [dev.sassless, dev.web, dev.htmlcss, d.ui, dev.git]
+				tags: [dev.sassless, dev.web, dev.htmlcss, d.ui, dev.git],
+				descriptionTexts: ["Jag arbetade med att förbättra UX och utformning i en befintlig webbaserad lösning för att underlätta för telemarketingbolag. "]
 			},
 			{
 				title: 'Schneider electric',
 				role: 'Front-end developer',
 				date: 'august 2012 - january 2013',
-				tags: [dev.js, dev.mobileApp, dev.unity, dev.git]
+				tags: [dev.js, dev.mobileApp, dev.unity, dev.git],
+				descriptionTexts: ["Schneider electric ville skapa en app som med hjälp av AR projicerade en 3D- modell av strömbrytaren på användarens vägg. Jag var med i app-utvecklingen och deltog även i 3D-modelleringen av strömbrytarna."]
 			},
 			{
 				title: 'Kronoberg county',
 				role: 'Front-end developer',
 				date: 'june 2012 - september 2012',
-				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.git],
+				descriptionTexts: ["Jag var utvecklare för en kampanjwebb kopplat till en stor miljösatsning för hela länet."]
 			},
 			{
 				title: 'Moistguard',
 				role: 'Front-end developer',
 				date: 'june 2012 - august 2012',
-				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.git],
+				descriptionTexts: ["Jag var med och utvecklade Moistguards hemsida."]
 			},
 			{
 				title: 'Scania',
 				role: 'Front-end developer',
 				date: 'mars 2012 - june 2012',
-				tags: [dev.htmlcss, dev.js, dev.web, dev.git]
+				tags: [dev.htmlcss, dev.js, dev.web, dev.git],
+				descriptionTexts: ["Scania hade i samband med en stor lansering av en ny lastbil en stor kampanj. Jag ansvarade för delen av kampanjwebben som var kopplat till release-eventet, med tillhörande livestream och twitterflöde."]
 			},
 			
 		];
@@ -310,11 +353,14 @@ class KnowView extends React.Component {
 												)
 											})}
 									</div>
+									{project.descriptionTexts && <MoreInfo descriptionTexts={project.descriptionTexts}></MoreInfo>}
+									
 								</Paragraph>
 							)
 						})
 					}
 					<h2 className={styles.paddingtop}>Employments</h2>
+					<div></div>
 					<Paragraph>
 						<h3>Gaia <br></br><span>january 2019 - ongoing</span></h3>
 						<p>UX-lead</p>
