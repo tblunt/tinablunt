@@ -93,6 +93,12 @@ class KnowView extends React.Component {
 				tags: [dev.react, dev.redux, dev.mobx, dev.web, d.ui, lead.uxLead]
 			},
 			{
+				title: 'Returpack',
+				role: 'Corporate service designer',
+				date: 'may 2019 - november 2019',
+				tags: [d.conceptDesign, d.userReaserch, d.ux, d.workshop, lead.facilitate, lead.uxLead]
+			},
+			{
 				title: 'Rejmes',
 				role: 'UX-designer',
 				date: 'january 2019 - april 2019',
@@ -102,7 +108,7 @@ class KnowView extends React.Component {
 			{
 				title: 'Sectra',
 				role: 'UX-designer',
-				date: 'january 2019 - ongoing',
+				date: 'january 2019 - june 2019',
 				tags: [d.ux, d.sketch, d.ui, dev.web, dev.js, dev.htmlcss, dev.sassless, dev.git],
 				descriptionTexts: ["Jag var UX-designer i utvecklingen av det webbaserade nätverket av Sectras externa företagssidor. Jag var även involverad i webbutvecklingen av multisitelösningen. "]
 			},
