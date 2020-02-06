@@ -89,21 +89,23 @@ class KnowView extends React.Component {
 			{
 				title: 'Tekniska verken',
 				role: 'UX-designer and front-end developer',
-				date: 'april 2019 - ongoing',
-				tags: [dev.react, dev.redux, dev.mobx, dev.web, d.ui, lead.uxLead]
+				date: 'april 2019 - february 2020',
+				tags: [dev.react, dev.redux, dev.mobx, dev.web, d.ui, lead.uxLead, d.adobexd, d.workshop, dev.git],
+				descriptionTexts: ["Tekniska verken utvecklar en IoT-plattform för att hantera digitala tvillingar och sensorer med tillhörande data och egenskaper. Plattformen ligger till grund för en app-flora av samhällstillämpningar, däribland gatubelysningsstyrning, bevattningsövervakning och lokalmiljömätning. Jag arbetade både med analys av användarbehov, gränssnittsdesign och front-end-utveckling."]
 			},
 			{
 				title: 'Returpack',
 				role: 'Corporate service designer',
-				date: 'may 2019 - november 2019',
-				tags: [d.conceptDesign, d.userReaserch, d.ux, d.workshop, lead.facilitate, lead.uxLead]
+				date: 'may 2019 - december 2019',
+				tags: [d.conceptDesign, d.userReaserch, d.ux, d.workshop, lead.facilitate, lead.uxLead],
+				descriptionTexts: ["Drev och utförde en behovsanalys med operativa verksamheten och ledning för att konkretisera framtida strategin för Returpacks pantsystem."]
 			},
 			{
 				title: 'Rejmes',
 				role: 'UX-designer',
 				date: 'january 2019 - april 2019',
 				tags: [d.ux, d.adobexd, d.ui, d.invision],
-				descriptionTexts: ["Jag var UX-designer i utvecklingen av ett webbaserat arbetsverktyg för att Rejmes internt ska hantera och effektivisera inbytesprocessen för en bil."]
+				descriptionTexts: ["Jag var UX-designer i utvecklingen av ett webbaserat arbetsverktyg för att Rejmes internt ska hantera och effektivisera inbytesprocessen för en begagnad bil."]
 			},
 			{
 				title: 'Sectra',
