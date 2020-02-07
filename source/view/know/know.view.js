@@ -340,7 +340,7 @@ class KnowView extends React.Component {
 					<div onClick={()=>this.changeGraph(1)} className={(this.state.selectedGraph == 1 ? styles.active: '')}>{T.t("Design")}</div>
 					<div onClick={()=>this.changeGraph(2)} className={(this.state.selectedGraph == 2 ? styles.active: '')}>{T.t("Leadership")}</div>
 				</div>
-				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} onSliceClick={(str)=>this.onSliceClicked(str)} />}
+				{this.state.chartData.length > 0 && <Pie data={this.state.chartData} onSliceClick={(str)=>this.onSliceClicked(str)} selectedTagString={this.state.selectedTagString} />}
 				<Container>
 					<h2>{T.t("Projects")}</h2>
 					<div></div>
@@ -357,7 +357,7 @@ class KnowView extends React.Component {
 											project.tags.map((tag)=>{
 												let isHighlightedStyle = tag == this.state.selectedTagString ? styles.highlighted : "";
 												return (
-													<div className={styles.tag+ " " + isHighlightedStyle}>{tag}</div>
+													<div className={styles.tag+ " " + isHighlightedStyle} onClick={()=>this.onSliceClicked(tag)}>{tag}</div>
 												)
 											})}
 									</div>
