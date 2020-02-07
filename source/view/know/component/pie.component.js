@@ -17,7 +17,6 @@ class Pie extends React.Component {
     super(props);
 
     this.state = {
-      highlightedItemLabel:null,
       hoveredItemLabel: null
     }
   }
@@ -55,16 +54,16 @@ class Pie extends React.Component {
     this.color = d3.scale.ordinal()
       .range(["rgba(0,0,0, 0.2)", "rgba(0,0,0, 0.3)", "rgba(0,0,0, 0.4)", "rgba(0,0,0, 0.5)"]);
 
-    this.change(this.props.data);
+    this.change(this.props.data, this.props.selectedTagString);
 
   }
 
   componentDidUpdate() {
-    this.change(this.props.data);
+    this.change(this.props.data, this.props.selectedTagString);
   }
 
 
-  change(data) {
+  change(data, selectedTagString = null) {
     let color = this.color;
     let key  = this.key;
     let arc = this.arc; 
@@ -88,18 +87,15 @@ class Pie extends React.Component {
         })
       })
       .on("click", (d) => {
-        this.setState({
-          highlightedItemLabel: d.data.label
-        });
         this.props.onSliceClick(d.data.label);
         
       });
 
       slice.style("fill", (d)=> {
-        if(d.data.label == this.state.highlightedItemLabel) {
+        if(d.data.label == selectedTagString) {
           return "#FD625E";
         }  
-        else if(d.data.label == this.state.hoveredItemLabel) {
+        else if(d.data.label == selectedTagString) {
           return "rgba(253, 98, 94, 0.7)";
         }
         else {
@@ -137,7 +133,7 @@ class Pie extends React.Component {
 
       text
         .style("fill", (d)=> {
-          if(d.data.label == this.state.highlightedItemLabel) {
+          if(d.data.label == selectedTagString) {
             return "#FD625E";
           }  
           else if(d.data.label == this.state.hoveredItemLabel) {
@@ -148,7 +144,7 @@ class Pie extends React.Component {
           }
         })
         .style("font-weight", (d)=> {
-          if(d.data.label == this.state.highlightedItemLabel) {
+          if(d.data.label == selectedTagString) {
             return "bold";
           }  
           else {
@@ -156,7 +152,7 @@ class Pie extends React.Component {
           }
         })
         .style("font-size", (d)=> {
-          if(d.data.label == this.state.highlightedItemLabel) {
+          if(d.data.label == selectedTagString) {
             return "14px";
           } 
           else {
