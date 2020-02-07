@@ -98,7 +98,7 @@ class KnowView extends React.Component {
 				role: 'Corporate service designer',
 				date: 'may 2019 - december 2019',
 				tags: [d.conceptDesign, d.userReaserch, d.ux, d.workshop, lead.facilitate, lead.uxLead],
-				descriptionTexts: ["Drev och utförde en behovsanalys med operativa verksamheten och ledning för att konkretisera framtida strategin för Returpacks pantsystem."]
+				descriptionTexts: ["Drev och utförde en behovsanalys med operativa verksamheten och ledning för att utforma framtida strategin för Returpacks pantsystem."]
 			},
 			{
 				title: 'Rejmes',
