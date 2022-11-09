@@ -17,7 +17,8 @@ class Social extends React.Component {
 		fetch('https://api.instagram.com/v1/users/33200675/media/recent/?access_token=33200675.054f33d.4d1b7684b9e8404eac2ad2f309d2c77d&count=20', {
 			method: 'GET',
 			data: {'client_id': '054f33dac6504612a2c40581c0fa2daf'},
-			dataType: 'jsonp',
+			contentType:  'application/json',
+			dataType: 'json',
 		})
 		.then((response) => response.json())
 		.then((imageData)=>{

@@ -67,7 +67,7 @@ class AmView extends React.Component {
 					</Paragraph>
 					<Paragraph>
 						<h3>{T.t("I grew up")}</h3>
-						<p>{T.t("in a basketball family and ended up dedicating 12 years and a LOT of time to the game (until I injured my knee for the last time). I think my basketball career built the ground I stand on today. Mostly because it went to hell. Nothing went as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. ")}</p>
+						<p>{T.t("in a basketball family and ended up dedicating 12 years and a LOT of time to the game (until I injured my knee for the last time). I think my basketball career built the ground I stand on today. Mostly because it didn't go as I planned. My own mind and the team dynamics came in the way of victory so many times. It taught me a lot. ")}</p>
 					</Paragraph>
 					<Paragraph>
 						<h3>{T.t('I studied')}</h3>
@@ -92,7 +92,7 @@ class AmView extends React.Component {
 				
 				</Container>
 				
-				<Social></Social>
+				{/* <Social></Social> */}
 			</div>
 		);
 	}
