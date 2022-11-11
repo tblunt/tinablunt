@@ -13,16 +13,28 @@ class DoView extends React.Component {
 	constructor(props) {
 		super(props);
 		
-		this.state = {};
+		this.state = {
+			selectedFilter:0
+		};
 
+	}
+
+	filterImages(index) {
+		this.setState({
+			selectedFilter:index
+		});
 	}
 	
 	
 	render() {
 		
 		return (
-			<div>
-				
+			<div className={styles.doView}>
+				<div className={styles.buttonGroup}>
+					<div onClick={()=>this.filterImages(0)} className={(this.state.selectedFilter == 0 ? styles.active: '')}>{T.t("Painting")}</div>
+					<div onClick={()=>this.filterImages(1)} className={(this.state.selectedFilter == 1 ? styles.active: '')}>{T.t("Sewing")}</div>
+					<div onClick={()=>this.filterImages(2)} className={(this.state.selectedFilter == 2 ? styles.active: '')}>{T.t("Photo")}</div>
+				</div>
 				<Container>
 					<div className={styles.imagesWrapper}>
 						<div>
