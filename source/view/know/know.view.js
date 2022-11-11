@@ -51,15 +51,9 @@ class KnowView extends React.Component {
 				sassless: "sass/less",
 				mobileApp: "App developing",
 				web: "Web developing",
-<<<<<<< HEAD
-				mobx: "mobx/rxjs",
-				redux: "Redux",
-				blazor: "Blazor"
-=======
 				mobx: "mobx/rxjs/redux",
 				blazor: "Blazor",
 				csharpdotnet: "c#/.net"
->>>>>>> 498631f2c31a7558a1291e19148a47d1615982de
 			},
 			design: {
 				userTest: "User tests",
@@ -94,17 +88,10 @@ class KnowView extends React.Component {
 		this.projects = [
 			{
 				title: 'Returpack',
-<<<<<<< HEAD
-				role: 'Interaction designer and front-end developer',
-				date: 'jan 2020 - jan 2022',
-				tags: [dev.blazor, dev.git, dev.htmlcss, lead.frontendLead, lead.uxLead, d.ui, d.ux, d.adobexd],
-				descriptionTexts: ["Ut från designprocessen kom ett antal tekniska lösningsförslag som jag designade GUI:t för och ingick även i utvecklignsteamet. Det är två applikationer som är menade att komplettera det befintliga affärssytemet med bättre rollanpassad gränssnittsyta. Skrivna i Blazor server."]
-=======
 				role: 'UX- and front-end lead',
-				date: 'jan 2020 - ',
+				date: 'jan 2020 - jan 2022',
 				tags: [d.ui, d.ux, lead.uxLead, lead.frontendLead, dev.blazor, dev.web, dev.sassless, dev.git, dev.csharpdotnet],
 				descriptionTexts: ["Efter att ha definierat behov och motivatorer hos Returpack designades en rad lösningsförslag på anpassade lösningar för olika processdelar och roller där behovet var som störst. Jag drev sedan arbetet för att konkretisera dessa lösningar, både koncept och utvecklingsmässigt. Bland annat skapades en webbapplikation för att hantera kundrelationer samt ett verktyg för att administrera pantmaterial."]
->>>>>>> 498631f2c31a7558a1291e19148a47d1615982de
 			},
 			{
 				title: 'Tekniska verken',
