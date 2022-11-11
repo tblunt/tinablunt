@@ -4,7 +4,7 @@
   "description": "Tina Blunt, the UX-design-deleloper.",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
+    "build": "C:/GIT/tinablunt/node_modules/.bin/webpack",
     "start": "webpack-dev-server --hot"
   },
   "repository": {
@@ -48,6 +48,7 @@
     "react-browser-detection": "^1.1.1",
     "react-ga": "^2.5.3",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "^5.0.1",
     "react-stripe-elements": "^1.5.0",
     "underscore": "^1.9.1",
     "url-loader": "^0.6.2",

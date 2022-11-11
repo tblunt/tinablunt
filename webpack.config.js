@@ -5,7 +5,7 @@ var config = {
 	entry: './source/index.js',
 
 	output: {
-		path: __dirname + '/build.',
+		path: __dirname + '/build',
 		filename: 'tinablunt.js',
 	},
 	

@@ -53,7 +53,8 @@ class KnowView extends React.Component {
 				mobileApp: "App developing",
 				web: "Web developing",
 				mobx: "mobx/rxjs",
-				redux: "Redux"
+				redux: "Redux",
+				blazor: "Blazor"
 			},
 			design: {
 				userTest: "User tests",
@@ -86,6 +87,13 @@ class KnowView extends React.Component {
 		let lead = this.tags.leadership;
 
 		this.projects = [
+			{
+				title: 'Returpack',
+				role: 'Interaction designer and front-end developer',
+				date: 'jan 2020 - jan 2022',
+				tags: [dev.blazor, dev.git, dev.htmlcss, lead.frontendLead, lead.uxLead, d.ui, d.ux, d.adobexd],
+				descriptionTexts: ["Ut från designprocessen kom ett antal tekniska lösningsförslag som jag designade GUI:t för och ingick även i utvecklignsteamet. Det är två applikationer som är menade att komplettera det befintliga affärssytemet med bättre rollanpassad gränssnittsyta. Skrivna i Blazor server."]
+			},
 			{
 				title: 'Tekniska verken',
 				role: 'UX-designer and front-end developer',
