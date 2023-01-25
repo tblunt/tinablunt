@@ -87,6 +87,20 @@ class KnowView extends React.Component {
 
 		this.projects = [
 			{
+				title: 'Nobina',
+				role: 'Front-end developer',
+				date: 'november 2022 - tillsvidare',
+				tags: [dev.angular, dev.web, dev.sassless, dev.git, dev.typescript, dev.mobx],
+				descriptionTexts: ["Två webbaserade applikationer med fokus på kartvisualisering som används som verktyg för trafikplanerare och trafikledare inom busslinjetrafik."]
+			},
+			{
+				title: 'Billerud',
+				role: 'UX- and front-end',
+				date: 'november 2022 - feb 2023',
+				tags: [d.ui, d.ux, d.userTest, dev.angular, dev.typescript, dev.web, dev.sassless, dev.git],
+				descriptionTexts: ["Webbaserad kundportal för att erbjuda Billeruds kunder ett komplemment till deras kundservice. Kunden kan se ordrar, fakturor och göra avrop från portalen."]
+			},
+			{
 				title: 'Returpack',
 				role: 'UX- and front-end lead',
 				date: 'jan 2020 - jan 2022',
