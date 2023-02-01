@@ -5,6 +5,7 @@ import Container from '../../component/container/container.component';
 import Paragraph from '../../component/paragraph/paragraph.component';
 
 import T from '../../service/translation.service';
+import knowtags from './knowtags';
 
 import Pie from './component/pie.component';
 import MoreInfo from './component/moreInfo.component';
@@ -36,50 +37,7 @@ class KnowView extends React.Component {
 	}
 
 	initData() {
-		this.tags = {
-			development: {
-				react: 'ReactJS',
-				script: 'Script',
-				angular: 'Angular',
-				angularJS: "AngularJS",
-				typescript: "Typescript",
-				reactNative: "React native",
-				git: "GIT/TFS",
-				d3: "d3.js",
-				webgl: "WebGL",
-				unity: "Unity3D",
-				sassless: "sass/less",
-				mobileApp: "App developing",
-				web: "Web developing",
-				mobx: "mobx/rxjs/redux",
-				blazor: "Blazor",
-				csharpdotnet: "c#/.net"
-			},
-			design: {
-				userTest: "User tests",
-				workshop: "Workshop",
-				invision: "InVision",
-				ui: "UI design",
-				adobexd: "Adobe XD",
-				abobecs: "Adobe CS",
-				sketch: "Sketch",
-				visualization: "Visualization",
-				noodl: "Noodl",
-				ux: "UX-design",
-				conceptDesign: "Concept design",
-				userReaserch: "User research",
-				prototyping: "Prototyping"
-			},
-			leadership: {
-				techPM: "Technical project manager",
-				scrumMaster: "Scrum master",
-				agile: "Agile development",
-				facilitate: "Facilitate",
-				frontendLead: "Front-end lead",
-				uxLead: "UX lead",
-				requirementAnalysis: "Requirement analysis"
-			}
-		};
+		this.tags = knowtags;
 
 		let dev = this.tags.development;
 		let d = this.tags.design;
@@ -91,7 +49,7 @@ class KnowView extends React.Component {
 				role: 'Front-end developer',
 				date: 'november 2022 - tillsvidare',
 				tags: [dev.angular, dev.web, dev.sassless, dev.git, dev.typescript, dev.mobx],
-				descriptionTexts: ["Två webbaserade applikationer med fokus på kartvisualisering som används som verktyg för trafikplanerare och trafikledare inom busslinjetrafik."]
+				descriptionTexts: ["Två webbaserade applikationer med fokus på kartvisualisering som används som verktyg för trafikplanerare och trafikledare inom linjebusstrafik."]
 			},
 			{
 				title: 'Billerud',

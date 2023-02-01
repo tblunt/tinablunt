@@ -4,7 +4,6 @@ var images = require.context('../../../asset/image', true);
 import T from '../../service/translation.service';
 
 import Container from '../../component/container/container.component';
-import Paragraph from '../../component/paragraph/paragraph.component';
 
 import ImagesGrid from './component/imagesGrid';
 import styles from './do.view.less';

@@ -2,11 +2,11 @@
 @import '../../config/mixins';
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  } 
-  
-  .svg {
+0% { opacity: 0; }
+100% { opacity: 1; }
+} 
+
+.svg {
     position: absolute;
     left:0;
     right:0;
@@ -14,8 +14,69 @@
     height: auto;
     bottom:0;
     pointer-events: none;
-  }
-  
+
+    .flex-display(flex);
+}
+
+.tagGroup {
+    .flex-basis(33%);
+    .flex(1);
+    .flex-display(flex);
+    .align-items(flex-end);
+    .flex-wrap(wrap-reverse);
+    .align-content(flex-start);
+    .justify-content(center);
+
+    .tag {
+        padding: 0.2rem 0.5rem;
+        margin: 0.05rem;
+        font-size: 0.6rem;
+        font-weight: 300;
+        background: @red_color;
+    }
+
+    &:first-child {
+        .justify-content(flex-start);
+    }
+
+    &:last-child {
+        .justify-content(flex-end);
+    }
+}
+
+
+.faded {
+    .tagGroup .tag 
+    {
+      background: @gray_color_darker;
+      color: @gray_color_dark;
+    }
+}
+
+@media (min-width: 800px) {
+    .tagGroup .tag{
+        padding: 0.5rem 1rem;
+        margin: 0.1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tagGroup .tag{
+        padding: 0.75rem 1rem;
+        margin: 0.15rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .tagGroup .tag{
+        padding: 1rem 1.5rem;
+        margin: 0.2rem;
+        font-size: 1rem;
+    }
+}
   
 .fadeInAnimation {
     opacity: 0;
@@ -42,10 +103,6 @@
         .animation(fadeIn 0.2s ease-in forwards 0.3s);
     }
 
-    &.anim15 {
-        .animation(fadeIn 0.2s ease-in forwards 0.35s);
-    }
-
     &.anim16{
         .animation(fadeIn 0.2s ease-in forwards 0.37s);
     }
@@ -60,6 +117,10 @@
 
     &.anim19 {
         .animation(fadeIn 0.2s ease-in forwards 0.46s);
+    }
+
+    &.anim110 {
+        .animation(fadeIn 0.2s ease-in forwards 0.48s);
     }
 
     &.anim111 {
@@ -77,29 +138,48 @@
     }
 
     &.anim22 {
-        .animation(fadeIn 0.2s ease-in forwards 0.65s);
+        .animation(fadeIn 0.2s ease-in forwards 0.61s);
     }
 
     &.anim23 {
-        .animation(fadeIn 0.2s ease-in forwards 0.69s);
+        .animation(fadeIn 0.2s ease-in forwards 0.62s);
     }
 
     &.anim24 {
-        .animation(fadeIn 0.2s ease-in forwards 0.72s);
+        .animation(fadeIn 0.2s ease-in forwards 0.63s);
     }
 
     &.anim25 {
-        .animation(fadeIn 0.2s ease-in forwards 0.78s);
+        .animation(fadeIn 0.2s ease-in forwards 0.64s);
     }
 
     &.anim26 {
-        .animation(fadeIn 0.2s ease-in forwards 0.80s);
+        .animation(fadeIn 0.2s ease-in forwards 0.65s);
     }
 
     &.anim27 {
-        .animation(fadeIn 0.2s ease-in forwards 0.85s);
+        .animation(fadeIn 0.2s ease-in forwards 0.66s);
     }
 
+    &.anim28 {
+        .animation(fadeIn 0.2s ease-in forwards 0.67s);
+    }
+
+    &.anim29 {
+        .animation(fadeIn 0.2s ease-in forwards 0.68s);
+    }
+
+    &.anim210 {
+        .animation(fadeIn 0.2s ease-in forwards 0.69s);
+    }
+
+    &.anim211 {
+        .animation(fadeIn 0.2s ease-in forwards 0.7s);
+    }
+
+    &.anim212 {
+        .animation(fadeIn 0.2s ease-in forwards 0.73s);
+    }
 
 
     &.anim31 {
@@ -107,48 +187,48 @@
     }
 
     &.anim32 {
-        .animation(fadeIn 0.2s ease-in forwards 0.95s);
+        .animation(fadeIn 0.2s ease-in forwards 0.92s);
     }
 
     &.anim33 {
-        .animation(fadeIn 0.2s ease-in forwards 1.09s);
+        .animation(fadeIn 0.2s ease-in forwards 0.96s);
     }
 
     &.anim34 {
-        .animation(fadeIn 0.2s ease-in forwards 1.12s);
+        .animation(fadeIn 0.2s ease-in forwards 0.98s);
     }
 
     &.anim35 {
-        .animation(fadeIn 0.2s ease-in forwards 1.18s);
+        .animation(fadeIn 0.2s ease-in forwards 0.99s);
     }
 
     &.anim36 {
-        .animation(fadeIn 0.2s ease-in forwards 1.25s);
+        .animation(fadeIn 0.2s ease-in forwards 1.00s);
     }
 
     &.anim37 {
-        .animation(fadeIn 0.2s ease-in forwards 1.35s);
+        .animation(fadeIn 0.2s ease-in forwards 1.01s);
+    }
+
+    &.anim38 {
+        .animation(fadeIn 0.2s ease-in forwards 1.05s);
+    }
+
+    &.anim39 {
+        .animation(fadeIn 0.2s ease-in forwards 1.09s);
+    }
+
+    &.anim310 {
+        .animation(fadeIn 0.2s ease-in forwards 1.10s);
+    }
+
+    &.anim311 {
+        .animation(fadeIn 0.2s ease-in forwards 1.12s);
+    }
+
+    &.anim312 {
+        .animation(fadeIn 0.2s ease-in forwards 1.16s);
     }
 
 
 }  
-
-.cls1 {
-    fill: @red_color;
-  }
-
-  .cls2 {
-    fill: #fff;
-    font-size: 30px;
-    font-family: 'Open Sans', sans-serif;
-  }
-
-  .faded {
-    .cls1, 
-    {
-      fill: @gray_color_darker;
-    }
-    .cls2 {
-        fill: @gray_color_light;
-    }
-}
