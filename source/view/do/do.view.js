@@ -22,13 +22,13 @@ class DoView extends React.Component {
 				folderName: "painting",
 				imagePrefix: "do",
 				startsAt: 1,
-				endsAt: 37 
+				endsAt: 38 
 			},
 			sewing: {
 				folderName: "sewing",
 				imagePrefix: "s",
 				startsAt: 1,
-				endsAt:  27
+				endsAt:  36
 			},
 			photo: {
 				folderName: "photo",

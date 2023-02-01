@@ -79,7 +79,7 @@ class AmView extends React.Component {
 					</Paragraph>
 					<Paragraph>
                         <h3>{T.t('After a while I')}</h3>
-                        <p>{T.t('started working as a technical UX-designer. Mainly with interaction design and prototype development, but I have a tendency to demand that projects apply a broader spectrum of the design process')} <span className={styles.dolink} onClick={()=>this.goToDo()}>{T.t('(read more), ')}</span> {T.t('which often lands on my table to execute. This forced me to learn and apply tools and processes earlier in the product development lifetime, as well as integrating them into the agile process.')} </p>
+                        <p>{T.t('started working as a technical UX-designer. Mainly with interaction design and prototype development, but I have a tendency to demand that projects apply a broader spectrum of the design process which often lands on my table to execute. This forced me to learn and apply tools and processes earlier in the product development lifetime, as well as integrating them into the agile process.')} </p>
                     </Paragraph>
  					<Paragraph>
                         <h3>{T.t('I now work')}</h3>
