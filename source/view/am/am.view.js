@@ -1,14 +1,13 @@
 import React from 'react';
 var images = require.context('../../../asset/image', true);
 
-import Container from '../../component/container/container.component';
-import Paragraph from '../../component/paragraph/paragraph.component';
-import LanguageChanger from '../../component/languageChanger/languageChanger.component';
 import BackgroundImageViewer from '../../component/backgroundImageViewer/backgrundImage.controller';
+import Container from '../../component/container/container.component';
+import LanguageChanger from '../../component/languageChanger/languageChanger.component';
+import Paragraph from '../../component/paragraph/paragraph.component';
 
 import T from '../../service/translation.service';
 
-import Social from './component/social.component';
 
 import styles from './am.view.less';
 
@@ -79,15 +78,15 @@ class AmView extends React.Component {
 					</Paragraph>
 					<Paragraph>
                         <h3>{T.t('After a while I')}</h3>
-                        <p>{T.t('started working as a technical UX-designer. Mainly with interaction design and prototype development, but I have a tendency to demand that projects apply a broader spectrum of the design process which often lands on my table to execute. This forced me to learn and apply tools and processes earlier in the product development lifetime, as well as integrating them into the agile process.')} </p>
+                        <p>{T.t('started working as a technical UX-designer. Mainly with interaction design and software development, but I have a tendency to demand that projects apply a broader spectrum of the design process which often lands on my table to execute. This forced me to learn and apply tools and processes earlier in the product development lifetime, as well as integrating them into the agile process.')} </p>
                     </Paragraph>
  					<Paragraph>
                         <h3>{T.t('I now work')}</h3>
-                        <p>{T.t("as UX-lead at an IT consultant company in Norrköping. I'm still getting my UX-hands dirty in customer projects but my main mission is to build the UX-strategy, UX-processes and the team behind it.")}</p>
+                        <p>{T.t("as UX-lead at an IT consultant company in Norrköping. I'm still getting my UX- and front-end-hands dirty in customer projects but my main mission is to build the UX-strategy, UX-processes and the team behind it.")}</p>
                     </Paragraph>
 					<Paragraph>
 						<h3>{T.t("When I don't work")}</h3>
-						<p>{T.t("I spend a lot of time sewing clothes, watching series, rock climbing and drinking beer with my friends and family.")}</p>
+						<p>{T.t("I spend a lot of time painting, sewing clothes, watching series, playing with my son and drinking beer with my friends and family.")}</p>
 					</Paragraph>
 				
 				</Container>

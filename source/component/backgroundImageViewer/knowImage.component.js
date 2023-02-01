@@ -22,6 +22,7 @@ class KnowImage extends React.Component {
                 {_.keys(tags).map((tagGroup, i) => {
                     return (
                         <div className={styles.tagGroup}>
+                            <div className={styles.tag +' '+ styles.fullWidth +' '+ styles.fadeInAnimation +' '+styles.anim0}>{tagGroup}</div>
                             {_.keys(tags[tagGroup]).map((tag, j) => {
                                 const groupClassName = 'anim'+(i+1);
                                 j = j > 11 ? 11 : j;
